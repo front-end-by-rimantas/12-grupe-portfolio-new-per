@@ -9,3 +9,12 @@
   .bg-primary-light {
     background-color: var(--primary-light-color);
   }
+
+  .photoborder {
+    padding: 0;
+    position: relative;
+    height: auto;
+    border-radius: 5px;
+    border: 10px solid #f4f5f8;
+  }
+  
