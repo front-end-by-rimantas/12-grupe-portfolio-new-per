@@ -1,15 +1,17 @@
 .bg-primary {
   background-color: var(--primary-color);
 }
-
 .bg-secondary {
   background-color: var(--secondary-color);
 }
-
 .bg-primary-light {
   background-color: var(--primary-light-color);
 }
+/*
+Header 
 
+Hero
+*/
 #hero {
   display: inline-block;
   width: 100%;
@@ -22,26 +24,44 @@
   text-align: center;
   position: relative;
 }
-
 .hero-image {
   width: 300px;
 }
-
 .hero-line1 {
   font-size: 26px;
   color: white;
   font-weight: bold;
 }
-
 .hero-line2 {
   font-size: 61px;
   margin-top: 16px;
   /* line-height: 81px; */
   color: white;
 }
-
 .hero-line3 {
   font-size: 26px;
   color: white;
   font-weight: bold;
 }
+
+/*
+About me
+
+My skills progress-bar
+
+My resume
+
+Achievements
+
+My services
+
+My portfolio gallery
+
+Testimonials
+
+Latest blog
+
+Get  in touch message forma, contact info
+
+Footer
+*/
