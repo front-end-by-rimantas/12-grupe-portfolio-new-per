@@ -10,27 +10,59 @@
   background-color: var(--primary-light-color);
 }
 
-/* 
-Header
 
-Hero
+//Header
 
-About me
 
-My skills (progress-bar)
+//Hero
+#hero {
+  display: inline-block;
+  width: 100%;
+  min-height: 800px;
+  background-image: url(../img/header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 200px 0;
+  text-align: center;
+  position: relative;
+}
+.hero-image{
+  width: 300px;
+}
 
-My resume
+.hero-line1  {
+  font-size: 26px;
+  color: white;
+  font-weight: bold;
+}
+.hero-line2 {
+  font-size: 61px;
+    margin-top: 16px;
+    /* line-height: 81px; */
+    color: white;
+}
+.hero-line3 {
+  font-size: 26px;
+  color: white;
+  font-weight: bold;
+}
+//About me
 
-Achievements
+//My skills (progress-bar)
 
-My services
+//My resume
 
-My portfolio (gallery)
+//Achievements
 
-Testimonials
+//My services
 
-Latest blog
+//My portfolio (gallery)
 
-Get  in touch (message form, contact info)
+//Testimonials
 
-Footer
+//Latest blog
+
+//Get  in touch (message form, contact info)
+
+//Footer
