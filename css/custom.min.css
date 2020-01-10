@@ -5,6 +5,10 @@
     padding: 0;
     position: relative;
     height: auto;
+    max-width: 100%;
     border-radius: 5px;
     border: 10px solid #f4f5f8;
+    display: inline-block;
+
   }
+ 

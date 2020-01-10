@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* розовая кнопка со шторками */
 .btn {
   color: #fff;
   cursor: pointer;
