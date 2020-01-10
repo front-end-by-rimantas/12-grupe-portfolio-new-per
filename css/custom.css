@@ -16,38 +16,90 @@ Header
 Hero
 
 About me */
-h4 {
-  font-size: 2rem;
-}
-h6 {
-  font-size: 1.2rem;
+
+
+#about h6 {
+  font-size: 19px;
   color: #282830;
   letter-spacing: 1.8px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  
+
 }
-ul {
+
+#about p {
+  font-size: 16px;
+  font-family: 'roboto';
+  color: #777777;
+  line-height: 2;
+  margin-bottom: 20px;
+
+}
+#about ul {
   padding: 0;
+
 }
-li {
+#about li {
   color: #282830;
   font-size: .9rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  font-family:'roboto';
+  margin-top: 20px;
+  margin-bottom: 20px;
+  list-style-type: none;
+  
 }
-span {
-  color: #676767;
-  padding: 0 .5rem;
+#about span {
+  color: var(--secondary-color);;
+  padding: 0.5rem;
+  font-family:'roboto';
 }
 
-.photoborder {
+#about .photoborder {
     padding: 0;
     position: relative;
     height: auto;
     max-width: 100%;
     border-radius: 5px;
-    border: 10px solid #f4f5f8;
+    border: 10px solid ;
+    border-color: var(--primary-color);
     display: inline-block;
-  
   }
+
+#about h4 {
+    font-size: 32px;
+    line-height: 50px;
+    margin-bottom: 30px;
+    position: relative;
+    margin-left: -8px;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1);
+}
+#about h4 :before {
+      display: inline-block;
+      content: '';
+      width: 70px;
+      height: 1px;
+      background-color: var(--secondary-color);
+      position: absolute;
+      margin-left: 10px;
+      bottom: -6px;
+      left: 0;
+    }
+#about h4 :after {
+        display: inline-block;
+        content: '';
+        width: 170px;
+        height: 1px;
+        background-color: var(--primary-color);
+        position: absolute;
+        margin-left: 10px;
+        bottom: -7px;
+        left: 0;
+    }
+ 
+
+
   
 
 
