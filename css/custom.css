@@ -1,16 +1,44 @@
 .bg-primary {
-    background-color: var(--primary-color);
-  }
-  
-  .bg-secondary {
-    background-color: var(--secondary-color);
-  }
-  
-  .bg-primary-light {
-    background-color: var(--primary-light-color);
-  }
+  background-color: var(--primary-color);
+}
 
-  .photoborder {
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.bg-primary-light {
+  background-color: var(--primary-light-color);
+}
+
+/* 
+Header
+
+Hero
+
+About me */
+h4 {
+  font-size: 2rem;
+}
+h6 {
+  font-size: 1.2rem;
+  color: #282830;
+  letter-spacing: 1.8px;
+}
+ul {
+  padding: 0;
+}
+li {
+  color: #282830;
+  font-size: .9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+span {
+  color: #676767;
+  padding: 0 .5rem;
+}
+
+.photoborder {
     padding: 0;
     position: relative;
     height: auto;
@@ -21,3 +49,23 @@
   
   }
   
+
+
+/*
+My skills (progress-bar)
+
+My resume
+
+Achievements
+
+My services
+
+My portfolio (gallery)
+
+Testimonials
+
+Latest blog
+
+Get  in touch (message form, contact info)
+
+Footer

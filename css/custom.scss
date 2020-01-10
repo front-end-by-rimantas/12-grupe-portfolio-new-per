@@ -17,16 +17,44 @@ Hero
 
 About me */
 
-.photoborder {
-  padding: 0;
-  position: relative;
-  height: auto;
-  max-width: 100%;
-  border-radius: 5px;
-  border: 10px solid #f4f5f8;
-  display: inline-block;
-
+h4 {
+  font-size: 2rem;
 }
+h6 {
+  font-size: 1.2rem;
+  color: #282830;
+  letter-spacing: 1.8px;
+}
+ul {
+  padding: 0;
+}
+li {
+  color: #282830;
+  font-size: .9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+span {
+  color: #676767;
+  padding: 0 .5rem;
+}
+
+.photoborder {
+    padding: 0;
+    position: relative;
+    height: auto;
+    max-width: 100%;
+    border-radius: 5px;
+    border: 10px solid #f4f5f8;
+    display: inline-block;
+  
+  }
+
+
+
+
+
+  
 
 
 /*
