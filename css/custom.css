@@ -45,6 +45,13 @@ Hero
   color: white;
   font-weight: bold;
 }
+#hero.fa {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
 
 /*About me */
 
