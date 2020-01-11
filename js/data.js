@@ -38,7 +38,6 @@ const works = [
 
 // achivements
 
-"use strict";
 
 const achievements = [
     {
