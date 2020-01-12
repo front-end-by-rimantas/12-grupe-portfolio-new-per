@@ -1,9 +1,12 @@
+/* title one more time */
+
 
 .resume h4 {
     font-size: 32px;
     line-height: 50px;
     margin-bottom: 30px;
     position: relative;
+    font-weight: 500;
     margin-left: -8px;
     text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1);
   }
@@ -35,13 +38,15 @@
     color: var(--secondary-color);
     padding: 0.5rem;
     font-family: 'roboto';
+  }
 
+/* comtent resume*/
 
-#resume .resume-content {
+.resume-content {
     position: relative;
     padding: 50px 20px;
   }
-#resume .resume-content .icon {
+.resume-content .icon {
     background-color: #2e353e;
     width: 40px;
     height: 40px;
@@ -51,63 +56,71 @@
     top: 9px;
     text-align: center;
   }
-#resume .resume-content .icon i {
+.resume-content .icon i {
     font-size: 1rem;
     color: #fff;
+    margin-top: 12px;
+    
   }
-#resume .resume-content ul {
+.resume-content ul {
     padding: 0;
   }
-  .resume .resume-content ul li {
+.resume-content ul li {
     position: relative;
     padding: 30px 30px 10px;
     margin-bottom: -10px;
+    list-style-type: none;
   }
-#resume .resume-content ul li::after {
+.resume-content ul li::after {
     position: absolute;
     content: "";
-    top: 40px;
-    width: 12px;
-    height: 12px;
+    top: 30px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     border: 2px solid #d6b161;
     background-color: #2e353e;
   }
-#resume .resume-content ul li span {
-    font-size: .8rem;
+.resume-content ul li span {
+    font-size: 12px;
     font-weight: 500;
+    font-family: 'roboto';
   }
-#resume .resume-content ul li h5 {
+.resume-content ul li h5 {
     color: #9c27b0;
-    font-size: .9rem;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     margin-top: 15px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
   }
-#resume .resume-content ul li h6 {
+.resume-content ul li h6 {
     color: #4b4b4b;
-    font-size: .8rem;
-    text-transform: capitalize;
-    font-weight: 600;
+    font-size: 12px;
+    
+    font-weight: 500;
+    font-family: 'Montserrat';
+    margin: 10px 0 10px;
   }
-#resume .resume-content .right {
+.resume-content .right {
     border-left: 1px solid #f4f4f4;
   }
-#resume .resume-content .right li::after {
+.resume-content .right li::after {
     left: -6px;
   }
-#resume .resume-content .left {
+.resume-content .left {
     border-right: 1px solid #f4f4f4;
   }
-#resume .resume-content .left li {
+.resume-content .left li {
     position: relative;
   }
-#resume .resume-content .left li::after {
+.resume-content .left li::after {
     right: -6px !important;
   }
-#resume .right-1 .icon {
+.right-1 .icon {
     left: 0;
   }
-#resume .left-1 .icon {
+.left-1 .icon {
     right: 0;
   }
   
