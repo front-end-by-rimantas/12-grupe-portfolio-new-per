@@ -15,8 +15,9 @@
 Hero
 */
 #hero {
-  display: inline-block;
+  /* display: inline-block; */
   width: 100%;
+  text-transform: uppercase;
   min-height: 800px;
   background-image: url(../img/header.jpg);
   background-size: cover;
@@ -26,31 +27,79 @@ Hero
   text-align: center;
   position: relative;
 }
-.hero-image {
-  width: 300px;
+#hero .row {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.hero-line1 {
+/* .hero-image {
+  width: 300px; 
+}*/
+#hero .hero-line1 {
   font-size: 26px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
 }
-.hero-line2 {
+#hero .hero-line2 {
   font-size: 61px;
   margin-top: 16px;
+  margin-bottom: 16px;
   /* line-height: 81px; */
   color: white;
 }
-.hero-line3 {
+#hero .hero-line3 {
   font-size: 26px;
   color: white;
   font-weight: bold;
 }
-#hero.fa {
-  display: inline-block;
+#hero .hero-socials .fa {
+  /* display: inline-block; */
   text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 15px;
   text-decoration: none;
   color: #fff;
+   ;
 }
+.over{
+  position: relative;
+}
+.over::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url(../img/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+  .over::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(32, 25, 25, 0.8)
+  }
+#hero * {
+   color:#D3D3D3;
+   text-decoration: none;
+   word-spacing: 10px;
+   font-size: 25px;
+    
+  }
 
 
 /*About me */

@@ -2,4 +2,4 @@
 
 // GALLERY
 
-renderGallery(  works);
+renderGallery( works );
