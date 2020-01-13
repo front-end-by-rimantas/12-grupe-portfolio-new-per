@@ -141,11 +141,7 @@ Get  in touch (message form, contact info)
   padding: 30px;
   
 }
-<<<<<<< HEAD
-  .footer>.row {
-=======
   .footer > .row {
->>>>>>> 201a04e3502c9187f5fada034aa6248d19e50fb1
     text-align: center;
   }
     p{
