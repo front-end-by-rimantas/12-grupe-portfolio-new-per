@@ -3,16 +3,19 @@
     width: calc(100% + 30px);
     margin-left: -15px;
  }
-    .gallery > .gallery-filter {
+
+    .gallery .gallery-filter {
         display: inline-block;
         width: 100%;
         padding: 15px;
     }
-    .gallery > .gallery-list {
+
+    .gallery .gallery-list {
         display: inline-block;
         width: 100%;
     }
-        .gallery > .gallery-list > .gallery-item {
+
+        .gallery .gallery-list .gallery-item {
             display: inline-block;
             width: calc(100% / 3 - 30px);
             margin: 15px;
@@ -21,14 +24,15 @@
             box-shadow: 0 4px 8px #0005;
             position: relative;
         }
-            .gallery-item > img {
+
+            .gallery .gallery-list .gallery-item  img {
                 display: inline-block;
                 width: 100%;
                 height: 270px;
                 object-fit: cover;
-
             }
-            .gallery-item > .texts {
+
+            .gallery .gallery-list .gallery-item .texts {
                 display: none;
                 text-align: center;
                 position: absolute;
@@ -36,26 +40,35 @@
                 right: 0;
                 bottom: 0;
                 left: 0;
-                background-color: #f008;
-
-                
+                background-color: rgba(255, 255, 255, 0.9);
+                justify-content: center;
+                align-items: center;      
+                flex-direction: column;          
             }
-                .texts > .title {
+
+                .gallery .gallery-list .gallery-item .texts .title {
+                    display: inline-block;
+                    width: 100%;
+                    color: #232323;
+                    font-size: 33px;
+                    line-height: 33px;
+                }
+
+                .gallery .gallery-list .gallery-item .texts .categories {
                     display: inline-block;
                     width: 100%;
                 }
-                .texts > .categories {
-                    display: inline-block;
-                    width: 100%;
-                }
-                    .categories > .cat{
+
+                    .gallery .gallery-list .gallery-item .texts .categories .cat{
                         display: inline-block;
-                        padding: 5px 10px;
+                        padding: 5px 5px;
                         margin-left: 5px;
                         font-size: 12px;
                         line-height: 15px;
-                        background-color: #ccc;
                     }
-            :hover .texts {
-                display: inline-block;
+
+                .gallery .gallery-list .gallery-item:hover .texts {
+                display: flex;
+                margin: 10px;
+                border-radius: 6px;
             }
