@@ -1,6 +1,6 @@
 "use strict";
 
-// GALLERY
+// GALLERY START
 
 const works = [
     {
@@ -34,7 +34,7 @@ const works = [
         category: ['HTML', 'CSS', 'JavaScript', 'Responsive']
     }
 ]
-
+// GALLERY END
 
 // achivements
 

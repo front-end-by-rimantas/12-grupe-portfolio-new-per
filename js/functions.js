@@ -1,8 +1,33 @@
 "use strict";
 
-function renderGallery (data) {
-    console.log(data);
-    
+function renderGallery (target,data) {
+    let HTML = '';
+    if (!Array.isArray(data)) {
+        return console.error('ERROR: negaliu sugeneruoti "GALLERY" sekcijos del blogo formato')
+    }
+    if (data.length === 0) {
+        return console.error('ERROR: negaliu sugeneruoti "GALLERY" sekcijos del tuscio saraso')
+    }
+    for (let i=0; i<data.length; i++) {
+        const work = data[i];
+        HTML += `<div class= "gallery-item">
+                    GALLERY ITEM
+                </div>`;
+    }
+    document.querySelector(target).innerHTML = HTML;
+
+    let HTMLlist = '';
+    for ( let i=0; i<data.length; i++) {
+        const work = data[i];
+    }
+    HTML = <div class="gallery">
+                <div class="gallery-filter">
+                    GALLERY FILTER
+                </div>
+                <div class="gallery-list">
+                    GALLERY LIST
+                </div>
+            </div>
     return;
 }
 
