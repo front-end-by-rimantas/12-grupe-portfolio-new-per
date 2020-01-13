@@ -61,3 +61,13 @@ const achievements = [
         title: 'Cups Of Tea'
     }
 ]
+
+
+// skills
+
+const skills = [
+{
+    title
+}
+
+]
