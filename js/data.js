@@ -25,12 +25,12 @@ const works = [
     },
     {
         img: '5.jpg',
-        title: 'Cosmetics',
+        title: 'Glass',
         category: ['HTML', 'CSS', 'JavaScript']
     },
     {
         img: '6.jpg',
-        title: 'Glass',
+        title: 'Cosmetics',
         category: ['HTML', 'CSS', 'JavaScript', 'Responsive']
     }
 ]
