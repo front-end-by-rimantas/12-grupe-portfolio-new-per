@@ -8,6 +8,12 @@ function renderGallery (target,data) {
     if (data.length === 0) {
         return console.error('ERROR: negaliu sugeneruoti "GALLERY" sekcijos del tuscio saraso')
     }
+
+
+    // Generuojame galerijos filtra
+    let filterHTML= 'GALLERY FILTER';
+
+    // Generuojame galerijos elementus
     for (let i=0; i<data.length; i++) {
         const work = data[i];
         HTML += `<div class= "gallery-item">
@@ -16,19 +22,24 @@ function renderGallery (target,data) {
     }
     document.querySelector(target).innerHTML = HTML;
 
-    let HTMLlist = '';
+    let listHTML = '';
     for ( let i=0; i<data.length; i++) {
         const work = data[i];
+        listHTML += <div class="gallery-item">
+                    GALLERY ITEM ${i+1}
+                    </div>
     }
+
+    // Viska apjungiame i galutine galeryja
     HTML = <div class="gallery">
                 <div class="gallery-filter">
-                    GALLERY FILTER
+                    ${filterHTML}
                 </div>
                 <div class="gallery-list">
-                    GALLERY LIST
+                    ${listHTML}
                 </div>
-            </div>
-    return;
+            </div>;
+    return; 
 }
 
 
