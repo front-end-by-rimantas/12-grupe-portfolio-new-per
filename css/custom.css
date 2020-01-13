@@ -135,14 +135,18 @@ Get  in touch (message form, contact info)
 
 /* Footer */
 .footer{
+  display: inline-block;
+  width: 100%;
   background-color: #282830;
   padding: 30px;
+  
 }
-  .row {
+  .footer > .row {
     text-align: center;
   }
     p{
       font-size: 15px;
+      line-height: 20px;
       text-transform: uppercase;
       color:  #F9F9FF;
     }
