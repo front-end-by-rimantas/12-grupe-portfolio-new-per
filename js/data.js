@@ -34,3 +34,30 @@ const works = [
         category: ['HTML', 'CSS', 'JavaScript', 'Responsive']
     }
 ]
+
+
+// achivements
+
+
+const achievements = [
+    {
+        icon: 'heart',
+        number: 738,
+        title: 'Happy clients'
+    },
+    {
+        icon: 'check-square-o',
+        number: 102,
+        title: 'SUCCESSFUL PROJECTS'
+    },
+    {
+        icon: 'trophy',
+        number: '06',
+        title: 'Awards Received'
+    },
+    {
+        icon: 'coffee',
+        number: 511,
+        title: 'Cups Of Tea'
+    }
+]
