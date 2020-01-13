@@ -2,4 +2,9 @@
 
 // GALLERY
 
-renderGallery( works );
+renderGallery(  works);
+
+
+//achievements
+
+renderAchievements( achievements );
