@@ -111,7 +111,7 @@ Achievements */
    url('../img/client.jpg');  
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
   background-attachment: fixed;
   position: relative;
   /* font-family: 'Montserrat', sans-serif; */
@@ -138,7 +138,7 @@ Get  in touch (message form, contact info)
   background-color: #282830;
   padding: 30px;
 }
-  .row {
+  .footer>.row {
     text-align: center;
   }
     p{
