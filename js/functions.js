@@ -2,44 +2,67 @@
 
 function renderGallery (target,data) {
     let HTML = '';
+    const targetDOM = document.querySelector(target);
+
+    //target vietos validavimas
+    if (typeof(target) !== 'string') {
+        return console.error('ERROR: vietos selektorius turi buti tekstinio tipo.')
+    }
+    if (target.length ===0 ) {
+        return console.error('ERROR: vietos selektorius negali buti tuscias.')
+    }
+    if ( targetDOM === null ) {
+        return console.error('ERROR: npagal pateikta selektoriu norima vieta/elementas nerastas.')
+    }
+
+    //pradinis duomenu validavimas
     if (!Array.isArray(data)) {
-        return console.error('ERROR: negaliu sugeneruoti "GALLERY" sekcijos del blogo formato')
+        return console.error('ERROR: negaliu sugeneruoti "GALLERY" sekcijos del blogo formato.')
     }
     if (data.length === 0) {
-        return console.error('ERROR: negaliu sugeneruoti "GALLERY" sekcijos del tuscio saraso')
-    }
-
-
-    // Generuojame galerijos filtra
-    let filterHTML= 'GALLERY FILTER';
-
-    // Generuojame galerijos elementus
-    for (let i=0; i<data.length; i++) {
-        const work = data[i];
-        HTML += `<div class= "gallery-item">
-                    GALLERY ITEM
-                </div>`;
-    }
-    document.querySelector(target).innerHTML = HTML;
-
-    let listHTML = '';
-    for ( let i=0; i<data.length; i++) {
-        const work = data[i];
-        listHTML += <div class="gallery-item">
-                    GALLERY ITEM ${i+1}
-                    </div>
+        return console.error('ERROR: negaliu sugeneruoti "GALLERY" sekcijos del tuscio saraso.')
     }
 
     // Viska apjungiame i galutine galeryja
-    HTML = <div class="gallery">
+    HTML = `<div class="gallery">
                 <div class="gallery-filter">
-                    ${filterHTML}
+                    ${generateGalleryFilter( data )}
                 </div>
                 <div class="gallery-list">
-                    ${listHTML}
+                    ${generateGalleryList( data )}
                 </div>
-            </div>;
+            </div>`;
+
+    targetDOM.innerHTML = HTML;
+
+    // Sudeti eventlistener ant filtravimo elementu
+
     return; 
+}
+function generateGalleryFilter( data ) {
+    return 'GALLERY FILTER';
+}
+function generateGalleryList( data ) {
+    let HTML = '';
+    for ( let i=0; i<data.length; i++) {
+        const work = data[i];
+
+        let catHTML = '';
+        for (let c=0; c<work.category.length; c++) {
+            catHTML += `<span class="cat">${work.category[c]}</span>`;
+        }
+
+        HTML += `<div class="gallery-item">
+                <img src="./img/portfolio/${work.img}">
+                    <div class="texts">
+                        <span class="title">${work.title}</span>
+                        <div class="categories">
+                            ${catHTML}
+                        </div>
+                    </div>
+                </div>`;
+    }
+    return HTML;
 }
 
 

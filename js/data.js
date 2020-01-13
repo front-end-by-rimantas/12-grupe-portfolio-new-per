@@ -4,32 +4,32 @@
 
 const works = [
     {
-        img: '',
+        img: '1.jpg',
         title: 'Herschels',
         category: ['HTML', 'CSS']
     },
     {
-        img: '',
+        img: '2.jpg',
         title: 'Megan Michelle',
         category: ['HTML', 'CSS']
     },
     {
-        img: '',
+        img: '3.jpg',
         title: 'Coffe',
         category: ['HTML', 'CSS']
     },
     {
-        img: '',
+        img: '4.jpg',
         title: 'Headphones',
         category: ['HTML', 'CSS', 'Responsive']
     },
     {
-        img: '',
+        img: '5.jpg',
         title: 'Cosmetics',
         category: ['HTML', 'CSS', 'JavaScript']
     },
     {
-        img: '',
+        img: '6.jpg',
         title: 'Glass',
         category: ['HTML', 'CSS', 'JavaScript', 'Responsive']
     }
