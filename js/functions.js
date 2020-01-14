@@ -40,6 +40,8 @@ function renderGallery (target,data) {
     return; 
 }
 function generateGalleryFilter( data ) {
+    console.log(data);
+    
     return 'GALLERY FILTER';
 }
 function generateGalleryList( data ) {
