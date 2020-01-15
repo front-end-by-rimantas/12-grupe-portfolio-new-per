@@ -36,11 +36,18 @@ function renderGallery (target,data) {
     targetDOM.innerHTML = HTML;
 
     // Sudeti eventlistener ant filtravimo elementu
+    const filters = targetDOM.querySelectorAll('.filter-item')
 
+    for (let i=0; i<filters.length; i++) {
+        filters[i].addEventListener('click', (event) => {
+            console.log(event.target.textContent);               
+        })
+    }
+    
     return; 
 }
 function generateGalleryFilter( data ) {
-    let HTML = '<div class="filter-item">All categories</div>';
+    let HTML = '<div class="filter-item active">All categories</div>';
     let list = [];
     let uniqueList = [];
 

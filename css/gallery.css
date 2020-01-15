@@ -14,8 +14,12 @@
         display: inline-block;
         float: left;
         margin: 5px 15px;
-
+        cursor: pointer;
     }
+
+        .gallery .gallery-filter .filter-item:hover,.active {
+            color: var(--secondary-color);
+        }
 
     .gallery .gallery-list {
         display: inline-block;
@@ -30,6 +34,7 @@
             overflow: hidden;
             box-shadow: 0 4px 8px #0005;
             position: relative;
+            cursor: pointer;
         }
 
             .gallery .gallery-list .gallery-item  img {
