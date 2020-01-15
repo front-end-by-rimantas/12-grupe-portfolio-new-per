@@ -1,6 +1,5 @@
 /* title one more time */
 
-
 .resume h4 {
     font-size: 32px;
     line-height: 50px;
@@ -40,7 +39,7 @@
     font-family: 'roboto';
   }
 
-/* comtent resume*/
+/* content resume*/
 
 .resume-content {
     position: relative;
@@ -123,4 +122,25 @@
 .left-1 .icon {
     right: 0;
   }
+
   
+
+@media (max-width: 900px) {
+       .left-1 .icon { 
+            left: 0;
+      }
+      .resume-content .left {
+            border-left: 1px solid #f4f4f4;
+            border-right: 0;
+      }
+      .resume-content .left li::after {
+            left: -6px !important;
+      }
+        .resolution {
+            text-align: left; }
+    }   
+
+@media (min-width: 901px) { .resolution {
+            text-align: right;  
+    }
+}
