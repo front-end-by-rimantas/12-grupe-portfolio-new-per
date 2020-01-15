@@ -57,3 +57,30 @@ function renderAchievements( data ) {
 
     return;
 }
+
+// my-skills
+
+function renderSkills( data ) {
+    let HTML = '';
+
+    if ( !Array.isArray(data) ) {
+        return console.error('ERROR: negaliu sugeneruoti "Skills" sekcijos, del blogo formato duomenu.');
+    }
+    if ( data.length === 0 ) {
+        return console.error('ERROR: negaliu sugeneruoti "Skills" sekcijos, del tuscio saraso.');
+    }
+
+    for ( let i=0; i< data.length; i++ ) {
+        const skills = data[i];
+        console.log(skills);
+
+        HTML += ``;
+        
+    }
+
+    
+
+
+
+    return;
+}
