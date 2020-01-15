@@ -40,9 +40,31 @@ function renderGallery (target,data) {
     return; 
 }
 function generateGalleryFilter( data ) {
-    console.log(data);
+    let HTML = '<div class="filter-item">All categories</div>';
+    let list = [];
+    let uniqueList = [];
+
+    // Собираем все категории в один список
+    for (let i=0; i<data.length; i++) {
+        const sublist = data[i].category;
+        // list = [...list, ...sublist]; такой синтаксис работает, как с массивами, так и с объектами, но потребляет больше рессурса
+        list = list.concat(sublist); // синтаксис работает только с массивами, потребляет меньше рессурсаю
+    }
     
-    return 'GALLERY FILTER';
+    //  Отбираем и оставляем только уникальные категории из собранного списка
+    for (let i=0; i<list.length; i++) {
+        const category = list[i];
+        if (uniqueList.indexOf(category) === -1 ) {
+            uniqueList.push(category);
+        }
+    }
+
+
+    //  Конструируем HTML 
+    for (let i=0; i<uniqueList.length; i++) {
+        HTML += `<div class="filter-item">${uniqueList[i]}</div>`
+    }
+    return HTML;
 }
 function generateGalleryList( data ) {
     let HTML = '';
