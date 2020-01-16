@@ -40,16 +40,15 @@ function renderGallery (target,data) {
     const works = targetDOM.querySelectorAll('.gallery-item')
 
     for (let i=0; i<filters.length; i++) {
-        filters[i].addEventListener('click', (event) => {
+        filters[i].addEventListener('click', (event) => {    
             const findWhat = event.target.textContent;  
             for (let w=0; w<works.length; w++) {
                 const work = works[w];
                 const categories = works[w].dataset.categories;
                 if ( categories.indexOf(findWhat) >= 0 ) {
-                        work.classList.remove('hide');
+                    work.classList.remove('hide');
                 }   else {
-                        work.classList.add('hide');
-
+                    work.classList.add('hide');
                 }
             }             
         })
@@ -65,8 +64,8 @@ function generateGalleryFilter( data ) {
     // Собираем все категории в один список
     for (let i=0; i<data.length; i++) {
         const sublist = data[i].category;
-        // list = [...list, ...sublist]; такой синтаксис работает, как с массивами, так и с объектами, но потребляет больше рессурса
-        list = list.concat(sublist); // синтаксис работает только с массивами, потребляет меньше рессурсаю
+        list = [...list, ...sublist]; //такой синтаксис работает, как с массивами, так и с объектами, но потребляет больше рессурса
+       //list = list.concat(sublist); // синтаксис работает только с массивами, потребляет меньше рессурсаю
     }
     
     //  Отбираем и оставляем только уникальные категории из собранного списка
