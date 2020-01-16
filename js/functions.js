@@ -182,3 +182,33 @@ function renderAchievements( data ) {
 
     return;
 }
+
+// Lightbox
+
+function lightbox () {
+    const elements = document.querySelectorAll('[data-lightbox]');
+    
+    elements.forEach( elem => {
+        elem.addEventListener('click', updateLightbox) 
+    })
+}
+
+function updateLightbox() {    
+    const lightboxDOM = document.querySelector('.lightbox');
+    console.log(lightboxDOM);  
+
+    // Jei lightbox'o dar nera - sukuriame
+    
+    if ( !lightboxDOM) {
+        const HTML = `
+            <div class="lightbox">
+                <div class="background"></div>
+                <div class="content">
+                    <img src="#">
+                    <i class="fa fa-times"></i>
+                </div>
+            </div>`;
+            document.querySelector('body')
+                .insertAdjacentHTML('beforeend', HTML);
+    }
+}
