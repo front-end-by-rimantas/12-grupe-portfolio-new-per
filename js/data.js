@@ -65,23 +65,24 @@ const achievements = [
 // my-skills
 
 const skills = [
-    // {
-    //     title: 'PHOTOGRAPHY',
-    //     value: 75
-    // },
-    // {
-    //     title: 'BRANDING',
-    //     value: 95
-    // },
-    // {
-    //     title: 'GRAPHIC DESIGN',
-    //     value: 70
-    // },
-    // {
-    //     title: 'DEVELOPMENT',
-    //     value: 80
-    // },
-    
+    {
+        title: 'PHOTOGRAPHY',
+        value: 75
+    },
+    {
+        title: 'BRANDING',
+        value: 95
+    },
+    {
+        title: 'GRAPHIC DESIGN',
+        value: 70
+    },
+    {
+        title: 'DEVELOPMENT',
+        value: 80
+    },
+
+
     {
         title: 'HTML / CSS',
         value: 95
@@ -99,6 +100,8 @@ const skills = [
         value: 94
     },
 ]
+
+
 
 
 

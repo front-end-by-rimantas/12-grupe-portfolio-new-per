@@ -62,6 +62,7 @@ function renderAchievements( data ) {
 
 function renderSkills( data ) {
     let HTML = '';
+    let HTML1 = '';
 
     if ( !Array.isArray(data) ) {
         return console.error('ERROR: negaliu sugeneruoti "Skills" sekcijos, del blogo formato duomenu.');
@@ -70,14 +71,44 @@ function renderSkills( data ) {
         return console.error('ERROR: negaliu sugeneruoti "Skills" sekcijos, del tuscio saraso.');
     }
 
-    for ( let i=0; i< data.length; i++ ) {
+    for ( let i=0; i< data.length/2; i++ ) {
         const skills = data[i];
        
-        HTML += `A`;
+        HTML += `<div class="progress-bar">
+        <div class="texts">
+            <div class="title">${skills.title}</div>
+            <div class="value">${skills.value}%</div>
+        </div>
+        <div class="bar">
+            <div class="value" style="width: ${skills.value}%;">
+                <div class="loading"></div>
+        </div>
+        </div>
+    </div>`;
     }
         console.log(HTML);
+        document.querySelector(`#skills_progress_bars_left`).innerHTML = HTML; 
+        
+        for ( let i=data.length/2; i< data.length; i++ ) {
+            const skills = data[i];
+           
+            HTML1 += `<div class="progress-bar">
+            <div class="texts">
+                <div class="title">${skills.title}</div>
+                <div class="value">${skills.value}%</div>
+            </div>
+            <div class="bar">
+                <div class="value" style="width: ${skills.value}%;">
+                    <div class="loading"></div>
+            </div>
+            </div>
+        </div>`;
+        }
+       document.querySelector(`#skills_progress_bars_right`).innerHTML = HTML1; 
 
-        document.querySelector(`#skills_progress_bars_right`).innterHTML = HTML;
+     // // document.getElementById("skills_progress_bars_right").innerHTML=HTML;
        
+
+
     return;
 }
