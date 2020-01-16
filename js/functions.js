@@ -106,9 +106,7 @@ function renderSkills( data ) {
         }
        document.querySelector(`#skills_progress_bars_right`).innerHTML = HTML1; 
 
-     // // document.getElementById("skills_progress_bars_right").innerHTML=HTML;
+     
        
-
-
     return;
 }

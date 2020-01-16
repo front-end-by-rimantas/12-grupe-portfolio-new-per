@@ -99,6 +99,11 @@ About me */
 }
 
 /* My skills */
+
+#skills span {
+  color: var(--secondary-color);
+}
+
 #skills h4 {
   font-size: 32px;
   line-height: 50px;
@@ -131,27 +136,6 @@ About me */
   bottom: -7px;
   left: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
