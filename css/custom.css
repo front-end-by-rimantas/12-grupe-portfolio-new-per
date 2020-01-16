@@ -20,62 +20,75 @@ Hero
 } */
 #hero {
   /* display: inline-block; */
-  width: 100%;
-  text-transform: uppercase;
-  min-height: 1100px;
+  max-height: 100hv;
   background-image: url(../img/header.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  /* padding: 200px 0; */
-  /* margin-left: calc( (100%- 1100px) / 2 );
-  margin-right: calc( (100% - 1100px) / 2 ) ; */
+  padding: 200px 0;
   text-align: center;
+  text-transform: uppercase;
   position: relative;
-  line-height: 80px;
+  /* line-height: 80px; */
   }
   #hero > .row {
-    display: block;
-    width: 1100px;
-    margin-left: calc( (100%- 1100px) / 2 );
-    margin-right: calc( (100% - 1100px) / 2 ) ;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
+    left: 0;
+    transform: translateY(-50%); 
+    /* background-position: center; */
   }
-/* .hero-image {
-  width: 300px; 
-}*/
-    #hero  .hero-line1 {
+    #hero .hero-line1 {
       font-size: 20px;
-      margin-top: 20px;
+      line-height: 40px;
+      /* margin-top: 20px;
       margin-bottom: 10px;
-      line-height: 80px;
+      */
       color: lightgray;
       /* font-weight: bold; */
+      /* position: absolute; */
     }
     #hero .hero-line2 {
       line-height: 30px;
       font-size: 41px;
-      margin-top: 16px;
-      margin-bottom: 16px;
+      /* margin-top: 16px;
+      margin-bottom: 16px; */
   /* line-height: 81px; */
       color: var(--primary-color);
+      /* position: absolute; */
     }
     #hero .hero-line3 {
-      width: 100%;
-      text-decoration: none;
-      text-align: center;
-      /* width: 30%; */
-      line-height: 28px;
       font-size: 15px;
+      line-height: 28px;
+      margin-bottom: 40px;
+     
+      
+      
       color:lightgray;
+      /* position: absolute; */
     }
-      #hero .hero-line3 .typewrite {
-      width:90%;
-      border-bottom: 4px solid rgba(0, 0, 0, 0.1);
-      border-top: 4px solid rgba(0, 0, 0, 0.1);
+      #hero .hero-line3 .typewrite::after {
+      /* display: inline-block; */
+      content: '';
+      height: 2px;
+      /* position: absolute; */
+      left: 30%;
+      right: 30%;
+      bottom: -3px;
+      background-color:rgba(0, 0, 0, 0.1);
+
+
+    }
+    #hero .hero-line3 .typewrite::before {
+      /* display: inline-block; */
+      content: '';
+      height: 2px;
+      /* position: absolute; */
+      left: 30%;
+      right: 30%;
+      top: -3px;
+      background-color: rgba(0, 0, 0, 0.1);
+
 
     }
 
@@ -95,11 +108,12 @@ Hero
       /* border: 1px solid ; */
       border-radius: 50%;
       font-size: 10px;
-      height: 40px;
-      width: 40px;
-      padding-top: 13px;
+      height: 30px;
+      width: 30px;
+      margin-top: 10px;
+      padding-top: 9px;
       background:  rgba(24, 17, 17, 0.1);
-      /* position: relative; */
+      /* position: absolute; */
     }
     #hero .hero-socials a:hover {
       cursor: pointer;
