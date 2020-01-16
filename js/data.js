@@ -5,33 +5,33 @@
 const works = [
     {
         img: '1.jpg',
-        title: 'Herschels',
-        category: ['HTML', 'CSS']
+        title: 'web design',
+        category: ['Brand', 'Design', 'Video', 'Photo']
     },
     {
         img: '2.jpg',
-        title: 'Megan Michelle',
-        category: ['HTML', 'CSS']
+        title: 'web design',
+        category: ['Design', 'Video', 'Photo']
     },
     {
         img: '3.jpg',
-        title: 'Coffe',
-        category: ['HTML', 'CSS']
+        title: 'web design',
+        category: ['Design', 'Video', 'Photo',]
     },
     {
         img: '4.jpg',
-        title: 'Headphones',
-        category: ['HTML', 'CSS', 'Responsive']
+        title: 'web design',
+        category: ['Design', 'Photo',]
     },
     {
         img: '5.jpg',
-        title: 'Glass',
-        category: ['HTML', 'CSS', 'JavaScript']
+        title: 'web design',
+        category: ['Design', 'Brand', 'Photo',]
     },
     {
         img: '6.jpg',
-        title: 'Cosmetics',
-        category: ['HTML', 'CSS', 'JavaScript', 'Responsive']
+        title: 'web design',
+        category: ['Design', 'Photo',]
     }
 ]
 // GALLERY END

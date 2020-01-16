@@ -1,100 +1,122 @@
 "use strict";
 
-function renderGallery (target,data) {
+function renderGallery( target, data ) {
     let HTML = '';
     const targetDOM = document.querySelector(target);
 
-    //target vietos validavimas
-    if (typeof(target) !== 'string') {
-        return console.error('ERROR: vietos selektorius turi buti tekstinio tipo.')
+    // target vietos validavimas
+    if ( typeof(target) !== 'string' ) {
+        return console.error('ERROR: vietos selectorius turi buti tekstinio tipo.');
     }
-    if (target.length ===0 ) {
-        return console.error('ERROR: vietos selektorius negali buti tuscias.')
+    if ( target.length === 0 ) {
+        return console.error('ERROR: vietos selectorius negali buti tuscias tekstas.');
     }
     if ( targetDOM === null ) {
-        return console.error('ERROR: npagal pateikta selektoriu norima vieta/elementas nerastas.')
+        return console.error('ERROR: pagal pateikta selectoriu norima vieta/elementas nerastas.');
     }
 
-    //pradinis duomenu validavimas
-    if (!Array.isArray(data)) {
-        return console.error('ERROR: negaliu sugeneruoti "GALLERY" sekcijos del blogo formato.')
+    // pradinis duomenu validavimas
+    if ( !Array.isArray(data) ) {
+        return console.error('ERROR: negaliu sugeneruoti "Gallery" sekcijos, del blogo formato duomenu.');
     }
-    if (data.length === 0) {
-        return console.error('ERROR: negaliu sugeneruoti "GALLERY" sekcijos del tuscio saraso.')
+    if ( data.length === 0 ) {
+        return console.error('ERROR: negaliu sugeneruoti "Gallery" sekcijos, del tuscio saraso.');
     }
 
-    // Viska apjungiame i galutine galeryja
+    // viska apjungiame i galutine galerija
     HTML = `<div class="gallery">
                 <div class="gallery-filter">
-                    ${generateGalleryFilter( data )}
+                    ${ generateGalleryFilter( data ) }
                 </div>
                 <div class="gallery-list">
-                    ${generateGalleryList( data )}
+                    ${ generateGalleryList( data ) }
                 </div>
             </div>`;
-
+    
     targetDOM.innerHTML = HTML;
 
-    // Sudeti eventlistener ant filtravimo elementu
-    const filters = targetDOM.querySelectorAll('.filter-item')
-    const works = targetDOM.querySelectorAll('.gallery-item')
+    // sudeti eventListener ant filtravimo elementu
+    const filterItems = targetDOM.querySelectorAll('.filter-item');
+    const galleryItems = targetDOM.querySelectorAll('.gallery-item');
+    
+    for ( let i=0; i<filterItems.length; i++ ) {
+        // pridedam event listenerius
+        filterItems[i].addEventListener('click', (event) => {
+            // suzinome kas buvo paspaustas
+            const findWhat = event.target.textContent;
 
-    for (let i=0; i<filters.length; i++) {
-        filters[i].addEventListener('click', (event) => {    
-            const findWhat = event.target.textContent;  
-            for (let w=0; w<works.length; w++) {
-                const work = works[w];
-                const categories = works[w].dataset.categories;
-                if ( categories.indexOf(findWhat) >= 0 ) {
+            if ( findWhat === 'All categories' ) {
+                // ieskome kuriuose gallery-item elementuose yra paminetas findWhat
+                for ( let w=0; w<galleryItems.length; w++ ) {
+                    const work = galleryItems[w];
                     work.classList.remove('hide');
-                }   else {
-                    work.classList.add('hide');
                 }
-            }             
+            } else {
+                // ieskome kuriuose gallery-item elementuose yra paminetas findWhat
+                for ( let w=0; w<galleryItems.length; w++ ) {
+                    const work = galleryItems[w];
+                    const categories = work.dataset.categories;
+    
+                    if ( categories.indexOf(findWhat) >= 0 ) {
+                        work.classList.remove('hide');
+                    } else {
+                        work.classList.add('hide');
+                    }
+                }
+            }
         })
     }
-    
-    return; 
+
+    return;
 }
+
 function generateGalleryFilter( data ) {
     let HTML = '<div class="filter-item active">All categories</div>';
     let list = [];
     let uniqueList = [];
 
-    // Собираем все категории в один список
-    for (let i=0; i<data.length; i++) {
-        const sublist = data[i].category;
-        list = [...list, ...sublist]; //такой синтаксис работает, как с массивами, так и с объектами, но потребляет больше рессурса
-       //list = list.concat(sublist); // синтаксис работает только с массивами, потребляет меньше рессурсаю
-    }
-    
-    //  Отбираем и оставляем только уникальные категории из собранного списка
-    for (let i=0; i<list.length; i++) {
-        const category = list[i].toLowerCase();
-        if (uniqueList.indexOf(category) === -1 ) {
-            uniqueList.push(category);
+    // surenkame visas kategorijas i viena sarasa
+    for ( let i=0; i<data.length; i++ ) {
+        const subList = data[i].category;
+
+        // atrenkame ir paliekame tik unikalias kategorijas is surinkto saraso
+        for ( let i=0; i<subList.length; i++ ) {
+            const category = subList[i].toLowerCase();
+
+            if ( uniqueList.indexOf(category) === -1 ) {
+                uniqueList.push(category);
+            }
         }
     }
 
+    // for ( let i=0; i<data.length; i++ ) {
+    //     list = list.concat(data[i].category);
+    // }
+    
+    // uniqueList = list.filter( (cat, i) => list.indexOf(cat) === i );
 
-    //  Конструируем HTML 
-    for (let i=0; i<uniqueList.length; i++) {
-        HTML += `<div class="filter-item">${uniqueList[i]}</div>`
+    // sukonstruojame HTML
+    for ( let i=0; i<uniqueList.length; i++ ) {
+        HTML += `<div class="filter-item">${uniqueList[i]}</div>`;
     }
+    
     return HTML;
 }
+
 function generateGalleryList( data ) {
     let HTML = '';
-    for ( let i=0; i<data.length; i++) {
+
+    for ( let i=0; i<data.length; i++ ) {
         const work = data[i];
 
         let catHTML = '';
-        for (let c=0; c<work.category.length; c++) {
+        for ( let c=0; c<work.category.length; c++ ) {
             catHTML += `<span class="cat">${work.category[c]}</span>`;
         }
-
-        HTML += `<div class="gallery-item" 
-                    data-categories="${(''+work.category).toLowerCase()}">
+        
+        HTML += `<div class="gallery-item"
+                    data-categories="${(''+work.category).toLowerCase()}"
+                    data-lightbox="img">
                     <img src="./img/portfolio/${work.img}">
                     <div class="texts">
                         <span class="title">${work.title}</span>
@@ -104,8 +126,10 @@ function generateGalleryList( data ) {
                     </div>
                 </div>`;
     }
+
     return HTML;
 }
+
 
 
 //achievement
