@@ -72,15 +72,12 @@ function renderSkills( data ) {
 
     for ( let i=0; i< data.length; i++ ) {
         const skills = data[i];
-        console.log(skills);
-
-        HTML += ``;
-        
+       
+        HTML += `A`;
     }
+        console.log(HTML);
 
-    
-
-
-
+        document.querySelector(`#skills_progress_bars_right`).innterHTML = HTML;
+       
     return;
 }

@@ -2,7 +2,7 @@
 
 // GALLERY
 
-renderGallery(  works);
+renderGallery( works );
 
 
 //achievements
