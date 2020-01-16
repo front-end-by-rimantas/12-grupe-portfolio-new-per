@@ -2,7 +2,7 @@
 
 // GALLERY
 
-renderGallery('#latest_works_gallery',  works);
+renderGallery('#latest_works_gallery', works);
 
 
 //achievements

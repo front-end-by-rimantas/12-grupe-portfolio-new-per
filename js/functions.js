@@ -37,10 +37,21 @@ function renderGallery (target,data) {
 
     // Sudeti eventlistener ant filtravimo elementu
     const filters = targetDOM.querySelectorAll('.filter-item')
+    const works = targetDOM.querySelectorAll('.gallery-item')
 
     for (let i=0; i<filters.length; i++) {
         filters[i].addEventListener('click', (event) => {
-            console.log(event.target.textContent);               
+            const findWhat = event.target.textContent;  
+            for (let w=0; w<works.length; w++) {
+                const work = works[w];
+                const categories = works[w].dataset.categories;
+                if ( categories.indexOf(findWhat) >= 0 ) {
+                        work.classList.remove('hide');
+                }   else {
+                        work.classList.add('hide');
+
+                }
+            }             
         })
     }
     
@@ -60,7 +71,7 @@ function generateGalleryFilter( data ) {
     
     //  Отбираем и оставляем только уникальные категории из собранного списка
     for (let i=0; i<list.length; i++) {
-        const category = list[i];
+        const category = list[i].toLowerCase();
         if (uniqueList.indexOf(category) === -1 ) {
             uniqueList.push(category);
         }
@@ -83,8 +94,9 @@ function generateGalleryList( data ) {
             catHTML += `<span class="cat">${work.category[c]}</span>`;
         }
 
-        HTML += `<div class="gallery-item">
-                <img src="./img/portfolio/${work.img}">
+        HTML += `<div class="gallery-item" 
+                    data-categories="${(''+work.category).toLowerCase()}">
+                    <img src="./img/portfolio/${work.img}">
                     <div class="texts">
                         <span class="title">${work.title}</span>
                         <div class="categories">
