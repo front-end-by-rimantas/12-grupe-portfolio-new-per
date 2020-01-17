@@ -184,7 +184,56 @@ function renderAchievements( data ) {
     return;
 }
 
-// Lightbox
+function renderSkills( data ) {
+    let HTML = '';
+    let HTML1 = '';
+
+    if ( !Array.isArray(data) ) {
+        return console.error('ERROR: negaliu sugeneruoti "Skills" sekcijos, del blogo formato duomenu.');
+    }
+    if ( data.length === 0 ) {
+        return console.error('ERROR: negaliu sugeneruoti "Skills" sekcijos, del tuscio saraso.');
+    }
+
+    for ( let i=0; i< data.length/2; i++ ) {
+        const skills = data[i];
+       
+        HTML += `<div class="progress-bar">
+        <div class="texts">
+            <div class="title">${skills.title}</div>
+            <div class="value">${skills.value}%</div>
+        </div>
+        <div class="bar">
+            <div class="value" style="width: ${skills.value}%;">
+                <div class="loading"></div>
+        </div>
+        </div>
+    </div>`;
+    }
+        console.log(HTML);
+        document.querySelector(`#skills_progress_bars_left`).innerHTML = HTML; 
+        
+        for ( let i=data.length/2; i< data.length; i++ ) {
+            const skills = data[i];
+           
+            HTML1 += `<div class="progress-bar">
+            <div class="texts">
+                <div class="title">${skills.title}</div>
+                <div class="value">${skills.value}%</div>
+            </div>
+            <div class="bar">
+                <div class="value" style="width: ${skills.value}%;">
+                    <div class="loading"></div>
+            </div>
+            </div>
+        </div>`;
+        }
+       document.querySelector(`#skills_progress_bars_right`).innerHTML = HTML1; 
+
+     
+       
+    return;
+}
 
 function lightbox () {
     const elements = document.querySelectorAll('[data-lightbox]');
