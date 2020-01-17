@@ -1,4 +1,5 @@
 "use strict";
+// gallery
 
 function renderGallery( target, data ) {
     let HTML = '';
