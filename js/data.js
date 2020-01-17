@@ -1,40 +1,40 @@
 "use strict";
 
-// GALLERY
+// GALLERY START
 
 const works = [
     {
-        img: '',
-        title: 'Herschels',
-        category: ['HTML', 'CSS']
+        img: '1.jpg',
+        title: 'web design',
+        category: ['Brand', 'Design', 'Video', 'Photo']
     },
     {
-        img: '',
-        title: 'Megan Michelle',
-        category: ['HTML', 'CSS']
+        img: '2.jpg',
+        title: 'web design',
+        category: ['Design', 'Video', 'Photo']
     },
     {
-        img: '',
-        title: 'Coffe',
-        category: ['HTML', 'CSS']
+        img: '3.jpg',
+        title: 'web design',
+        category: ['Design', 'Video', 'Photo',]
     },
     {
-        img: '',
-        title: 'Headphones',
-        category: ['HTML', 'CSS', 'Responsive']
+        img: '4.jpg',
+        title: 'web design',
+        category: ['Design', 'Photo',]
     },
     {
-        img: '',
-        title: 'Cosmetics',
-        category: ['HTML', 'CSS', 'JavaScript']
+        img: '5.jpg',
+        title: 'web design',
+        category: ['Design', 'Brand', 'Photo',]
     },
     {
-        img: '',
-        title: 'Glass',
-        category: ['HTML', 'CSS', 'JavaScript', 'Responsive']
+        img: '6.jpg',
+        title: 'web design',
+        category: ['Design', 'Photo',]
     }
 ]
-
+// GALLERY END
 
 // achivements
 
