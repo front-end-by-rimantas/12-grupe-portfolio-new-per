@@ -122,45 +122,42 @@ Achievements */
 
 /* My portfolio (gallery) */
 
-h2 {
-  font-size: 45px;
+#skills span {
+  color: var(--secondary-color);
+}
+
+#skills h4 {
+  font-size: 32px;
   line-height: 50px;
   margin-bottom: 30px;
   position: relative;
+  margin-left: -8px;
+  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1);
 }
 
-  h2::after {
-    display: inline-block;
-    content: '';
-    width: 80px;
-    height: 2px;
-    background-color: var(--secondary-color);
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-  }
-
-  h2.no-decoration::before, h2.no-decoration::after {
-    display: none;
-  }
-
-h2.center {
-  text-align: center;
+#skills h4 :before {
+  display: inline-block;
+  content: '';
+  width: 70px;
+  height: 1px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  margin-left: 0px;
+  bottom: -6px;
+  left: 0;
 }
 
-  h2.center::before {
-    left: calc(50% - 5px);
-  }
-
-  h2.center::after {
-    left: calc(50% - 40px);
-  }
-
-.bg-secondary ::before,
-.bg-secondary ::after {
-  background-color: var(--secondary-color-anti);
+#skills h4 :after {
+  display: inline-block;
+  content: '';
+  width: 170px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  margin-left: 0px;
+  bottom: -7px;
+  left: 0;
 }
-
 /* Testimonials */
 
 /* Latest blog */
