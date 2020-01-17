@@ -117,16 +117,55 @@ Achievements */
   /* font-family: 'Montserrat', sans-serif; */
 }
 
-/*
-My services
 
-My portfolio (gallery)
+/* My services */
 
-Testimonials
+/* My portfolio (gallery) */
 
-Latest blog
+h2 {
+  font-size: 45px;
+  line-height: 50px;
+  margin-bottom: 30px;
+  position: relative;
+}
 
-Get  in touch (message form, contact info)
+  h2::after {
+    display: inline-block;
+    content: '';
+    width: 80px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+  }
+
+  h2.no-decoration::before, h2.no-decoration::after {
+    display: none;
+  }
+
+h2.center {
+  text-align: center;
+}
+
+  h2.center::before {
+    left: calc(50% - 5px);
+  }
+
+  h2.center::after {
+    left: calc(50% - 40px);
+  }
+
+.bg-secondary ::before,
+.bg-secondary ::after {
+  background-color: var(--secondary-color-anti);
+}
+
+/* Testimonials */
+
+/* Latest blog */
+
+/* Get  in touch (message form, contact info) */
 
 
 
