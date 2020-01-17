@@ -10,12 +10,51 @@
   background-color: var(--primary-light-color);
 }
 
+/* Title */
 
-/* Header
+#title span {
+  color: var(--secondary-color);
+}
 
-Hero
+#title h4 {
+  font-size: 32px;
+  line-height: 50px;
+  margin-bottom: 30px;
+  position: relative;
+  text-transform: capitalize;
+  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
+}
 
-About me */
+#title h4 :before {
+  display: inline-block;
+  content: '';
+  width: 70px;
+  height: 1px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  margin-left: 0px;
+  bottom: -6px;
+  left: 0;
+}
+
+#title h4 :after {
+  display: inline-block;
+  content: '';
+  width: 170px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  margin-left: 0px;
+  bottom: -7px;
+  left: 0;
+}
+
+
+/* Header */
+
+/* Hero */
+
+/* About me */
 
 
 #about h6 {
@@ -48,12 +87,6 @@ About me */
   list-style-type: none;
 }
 
-#about span {
-  color: var(--secondary-color);
-  padding: 0.5rem;
-  font-family: 'roboto';
-}
-
 #about .photoborder {
   padding: 0;
   position: relative;
@@ -65,45 +98,12 @@ About me */
   display: inline-block;
 }
 
-#about h4 {
-  font-size: 32px;
-  line-height: 50px;
-  margin-bottom: 30px;
-  position: relative;
-  margin-left: -8px;
-  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1);
-}
 
-#about h4 :before {
-  display: inline-block;
-  content: '';
-  width: 70px;
-  height: 1px;
-  background-color: var(--secondary-color);
-  position: absolute;
-  margin-left: 10px;
-  bottom: -6px;
-  left: 0;
-}
+/* My skills (progress-bar) */
 
-#about h4 :after {
-  display: inline-block;
-  content: '';
-  width: 170px;
-  height: 1px;
-  background-color: var(--primary-color);
-  position: absolute;
-  margin-left: 10px;
-  bottom: -7px;
-  left: 0;
-}
+/* My resume */
 
-/* 
-My skills (progress-bar)
-
-My resume
-
-Achievements */
+/* Achievements */
 
 .counter {
   background: linear-gradient( rgba(255, 255, 255, 0.2),
@@ -117,16 +117,17 @@ Achievements */
   /* font-family: 'Montserrat', sans-serif; */
 }
 
-/*
-My services
 
-My portfolio (gallery)
+/* My services */
 
-Testimonials
+/* My portfolio (gallery) */
 
-Latest blog
 
-Get  in touch (message form, contact info)
+/* Testimonials */
+
+/* Latest blog */
+
+/* Get  in touch (message form, contact info) */
 
 
 
