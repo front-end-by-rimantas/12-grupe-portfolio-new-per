@@ -8,12 +8,15 @@
   background-color: var(--primary-light-color);
 }
 
+/* Title */
 
-/* Header
+#title span {
+  color: var(--secondary-color);
+}
 
 
-Hero
-*/
+/* Hero */
+
 /* .container {
   display: inline-block;
   width: 100%;
@@ -156,6 +159,45 @@ Hero
 
 
 /*About me */
+#title h4 {
+  font-size: 32px;
+  line-height: 50px;
+  margin-bottom: 30px;
+  position: relative;
+  text-transform: capitalize;
+  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+#title h4 :before {
+  display: inline-block;
+  content: '';
+  width: 70px;
+  height: 1px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  margin-left: 0px;
+  bottom: -6px;
+  left: 0;
+}
+
+#title h4 :after {
+  display: inline-block;
+  content: '';
+  width: 170px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  margin-left: 0px;
+  bottom: -7px;
+  left: 0;
+}
+
+
+/* Header */
+
+/* Hero */
+
+/* About me */
 
 
 #about h6 {
@@ -188,12 +230,6 @@ Hero
   list-style-type: none;
 }
 
-#about span {
-  color: var(--secondary-color);
-  padding: 0.5rem;
-  font-family: 'roboto';
-}
-
 #about .photoborder {
   padding: 0;
   position: relative;
@@ -205,7 +241,14 @@ Hero
   display: inline-block;
 }
 
-#about h4 {
+
+/* My skills */
+
+#skills span {
+  color: var(--secondary-color);
+}
+
+#skills h4 {
   font-size: 32px;
   line-height: 50px;
   margin-bottom: 30px;
@@ -214,36 +257,35 @@ Hero
   text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1);
 }
 
-#about h4 :before {
+#skills h4 :before {
   display: inline-block;
   content: '';
   width: 70px;
   height: 1px;
   background-color: var(--secondary-color);
   position: absolute;
-  margin-left: 10px;
+  margin-left: 0px;
   bottom: -6px;
   left: 0;
 }
 
-#about h4 :after {
+#skills h4 :after {
   display: inline-block;
   content: '';
   width: 170px;
   height: 1px;
-  background-color: var(--primary-color);
+  background-color: #fff;
   position: absolute;
-  margin-left: 10px;
+  margin-left: 0px;
   bottom: -7px;
   left: 0;
 }
 
-/* 
-My skills (progress-bar)
 
-My resume
 
-Achievements */
+  /* My resume */
+
+/* Achievements */
 
 .counter {
   background: linear-gradient( rgba(24, 18, 18, 0.2),
@@ -257,17 +299,17 @@ Achievements */
   /* font-family: 'Montserrat', sans-serif; */
 }
 
-/*
-My services
 
-My portfolio gallery
+/* My services */
 
-Testimonials
+/* My portfolio (gallery) */
 
-Latest blog
+
+/* Testimonials */
 
 Get  in touch message forma, contact info
 
+/* Get  in touch (message form, contact info) */
 
 
 /* Footer */
