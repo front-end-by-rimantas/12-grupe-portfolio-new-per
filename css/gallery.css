@@ -76,7 +76,7 @@
                 }
 
                     .gallery .gallery-list .gallery-item .texts .categories .cat{
-                        display: inline-block;
+                        display: none;
                         padding: 5px 5px;
                         margin-left: 5px;
                         font-size: 12px;
