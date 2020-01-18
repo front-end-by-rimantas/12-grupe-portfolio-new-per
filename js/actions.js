@@ -8,3 +8,7 @@ renderGallery(  works);
 //achievements
 
 renderAchievements( achievements );
+
+//Myresume
+
+renderMyresume( linesResume);

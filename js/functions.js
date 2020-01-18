@@ -57,3 +57,57 @@ function renderAchievements( data ) {
 
     return;
 }
+
+// My Resume
+
+function renderMyresume( data ) {
+    const maxLines = 6;
+    let createdLines = 0;
+    let HTML = '';
+
+ //   if ( !Array.isArray(data) ) {
+ //       return console.error('ERROR: negaliu sugeneruoti "Resume" sekcijos, del blogo formato duomenu.');
+ //   }
+ //   if ( data.length === 0 ) {
+ //       return console.error('ERROR: negaliu sugeneruoti "Resume" sekcijos, del tuscio saraso.');
+ //   }
+
+    // sugeneruojame HTML
+    for ( let i=0; i<data.length; i++ ) {
+        if ( createdLines === maxLines ) {
+            break;
+        }
+        const line = data[i];
+
+        // tikrinu, ar tai objektas
+  //      if ( typeof(line) !== 'object' ||
+  //           line === null ||
+  //           Array.isArray(line) ) {
+  //          continue;
+  //      }
+
+      //  if ( (line.line1 || (typeof(line.line1) === 'string' && line.line1.length > 0)) &&
+        //     (line.line2 || line.line2 > 0) &&
+      //       (line.line3 || (typeof(line.line3) === 'string' && line.line3.length > 0)) ) {
+            HTML += `<ul >
+                        <li >
+                        <span>${line.line1}</span>
+                        <h5>${line.line2}</h5>
+                        <h6>${line.line3}</h6>
+                        </li>
+                    </ul>`;
+            
+            createdLines++;
+    //    }
+    }
+    
+    // istatome HTML i reikiama vieta
+ //   if ( createdLines === 0 ) {
+   //     document.querySelector('#myresume').remove();
+ //   } else {
+        document.querySelector('#myresume').innerHTML = HTML;
+        document.querySelector('#myresume-left').innerHTML = HTML;
+ //   }
+
+    return;
+}
