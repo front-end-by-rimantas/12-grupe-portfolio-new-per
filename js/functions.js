@@ -1,4 +1,70 @@
 "use strict";
+
+
+//hero 
+
+function manipulateLetter( list, wordIndex, letterIndex, actionType) {
+    //elementai, kurie animuotai keicia teksta
+        const target = document.getElementById('hero_line3');
+        const timeStep = 100;
+        const delayBefore = 1000;
+        const delayAfter = 1000;
+        const deleteTimeStep = 100;
+        
+
+   if (actionType === 'add') {
+       target.classList.add('line2');
+      setTimeout (() => {
+          
+        target.textContent += list[wordIndex][letterIndex] ;
+
+        if (list[wordIndex].length > letterIndex + 1 ) {
+            manipulateLetter( list, wordIndex, letterIndex + 1, actionType)
+        } else {
+            manipulateLetter( list, wordIndex, letterIndex , 'delayAfter')
+        }
+
+    }, timeStep);
+       
+   }
+   if (actionType === 'delayAfter') {
+    setTimeout (() => {
+        const word = list[wordIndex];
+        target.textContent = word.slice(0, letterIndex);
+
+        if ( 0 <= letterIndex -1 ){
+            manipulateLetter( list, wordIndex, letterIndex - 1, actionType)  
+        } else {
+            manipulateLetter( list, wordIndex, letterIndex, 'delayBefore')
+        }
+                 
+    }, deleteTimeStep);
+
+   }
+
+   if (actionType === 'delayBefore') {
+    
+    setTimeout (() => {
+
+        if ( wordIndex +1 === list.length ) {
+            manipulateLetter( list, 0, 0, 'add')
+        } else {
+            manipulateLetter( list, wordIndex+1, 0, 'add')
+        }
+
+        }, delayBefore);
+    
+    }
+}
+   
+    //begalinis ciklas siuo atveju netinka
+    //kad cikla galetume prasukti iki begales, reikalinga lygybe prie i elemento saraso ilgio
+    // for ( let i=0; i<=list.length; i++ ) {
+        //jeigu saraso ilgis lygus, nuresetinam i nuli, geriau nedaryti, kad neuzsukti begalybes
+        // if ( i=== list.length ) i=0;
+        //tekstas, kuri reikia animuoti
+        // const text = list[i];
+
 // gallery
 
 function renderGallery( target, data ) {
@@ -57,6 +123,8 @@ function renderGallery( target, data ) {
                 for ( let w=0; w<galleryItems.length; w++ ) {
                     const work = galleryItems[w];
                     const categories = work.dataset.categories;
+
+function renderGallery (data) {
     
                     if ( categories.indexOf(findWhat) >= 0 ) {
                         work.classList.remove('hide');
