@@ -1,4 +1,7 @@
 "use strict";
+//hero
+
+const spec = [ 'ui/ux designer', 'photographer', 'web developer'];
 
 // GALLERY
 

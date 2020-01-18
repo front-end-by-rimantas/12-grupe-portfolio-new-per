@@ -23,7 +23,7 @@
 } */
 #hero {
   /* display: inline-block; */
-  max-height: 100hv;
+  min-height: 100vh;
   background-image: url(../img/header.jpg);
   background-size: cover;
   background-position: center;
@@ -34,7 +34,7 @@
   position: relative;
   /* line-height: 80px; */
   }
-  #hero > .row {
+  #hero .row {
     position: absolute;
     top: 50%;
     left: 0;
@@ -62,19 +62,38 @@
     }
     #hero .hero-line3 {
       font-size: 15px;
-      line-height: 28px;
-      margin-bottom: 40px;
-     
-      
-      
+      line-height: 40px;
+      /* margin-bottom: 40px; */
       color:lightgray;
       /* position: absolute; */
     }
-      #hero .hero-line3 .typewrite::after {
-      /* display: inline-block; */
+    #hero .hero-line3 > div {
+      display: inline;
+      border: none;
+    }
+      #hero .hero-line3 > div.line {
+        border-right: 0.5px solid rgba(0, 0, 0, 0.2) ;
+        border-collapse: separate;
+        border-spacing: 15px 15px;
+        
+      }  
+        #hero .hero-line3 > div.line2 {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 8px;
+        border-top: 2px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        border-collapse: separate;
+        border-spacing: 15px 15px;
+
+        }
+/* 
+    
+    #hero .hero-line3 > div::after {
+      /* display: inline-block;
       content: '';
-      height: 2px;
-      /* position: absolute; */
+      height: 12px;
+      position: absolute;
       left: 30%;
       right: 30%;
       bottom: -3px;
@@ -82,18 +101,18 @@
 
 
     }
-    #hero .hero-line3 .typewrite::before {
-      /* display: inline-block; */
+    #hero .hero-line3 > div::before {
+      display: inline-block;
       content: '';
-      height: 2px;
-      /* position: absolute; */
+      height: 12px;
+      position: absolute;
       left: 30%;
       right: 30%;
       top: -3px;
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: rgba(0, 0, 0, 0.1); 
 
 
-    }
+    } 
 
     /* #hero >.row .hero-socials  {
   /* display: inline-block; */
@@ -105,7 +124,7 @@
     /* } */
 
     #hero .hero-socials a {
-      /* display: block; */
+      display: inline-block;
       text-decoration: none;
       color: #fff;
       /* border: 1px solid ; */
@@ -128,7 +147,7 @@
 }
 .over::before {
   content: "";
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   bottom: 0;
   right: 0;
