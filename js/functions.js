@@ -12,7 +12,6 @@ function manipulateLetter( list, wordIndex, letterIndex, actionType) {
         
 
    if (actionType === 'add') {
-       target.classList.add('line');
        target.classList.add('line2');
       setTimeout (() => {
           
@@ -28,7 +27,6 @@ function manipulateLetter( list, wordIndex, letterIndex, actionType) {
        
    }
    if (actionType === 'delayAfter') {
-    target.classList.add('line2');
     setTimeout (() => {
         const word = list[wordIndex];
         target.textContent = word.slice(0, letterIndex);
@@ -44,8 +42,7 @@ function manipulateLetter( list, wordIndex, letterIndex, actionType) {
    }
 
    if (actionType === 'delayBefore') {
-       target.classList.remove ('line');
-       
+    
     setTimeout (() => {
 
         if ( wordIndex +1 === list.length ) {

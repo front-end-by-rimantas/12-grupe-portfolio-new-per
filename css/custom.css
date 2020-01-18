@@ -23,6 +23,7 @@
 } */
 #hero {
   /* display: inline-block; */
+  width: 100%;
   min-height: 100vh;
   background-image: url(../img/header.jpg);
   background-size: cover;
@@ -38,26 +39,32 @@
     position: absolute;
     top: 50%;
     left: 0;
+    right: 0;
     transform: translateY(-50%); 
     /* background-position: center; */
   }
     #hero .hero-line1 {
-      font-size: 20px;
       line-height: 40px;
-      /* margin-top: 20px;
-      margin-bottom: 10px;
-      */
-      color: lightgray;
+      font-size: 20px; 
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-family: 'Raleway', sans-serif;
+      color: #bdbdbd;
+      text-align: center;
+      font-weight: 500;
       /* font-weight: bold; */
       /* position: absolute; */
     }
     #hero .hero-line2 {
-      line-height: 30px;
-      font-size: 41px;
-      /* margin-top: 16px;
-      margin-bottom: 16px; */
+      line-height: 60px;
+      font-size: 60px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      /* margin-top: 16px;*/
+      margin-bottom: 16px;
   /* line-height: 81px; */
       color: var(--primary-color);
+      text-shadow: 2px 4px 3px rgba(0,0,0,0.1);
       /* position: absolute; */
     }
     #hero .hero-line3 {
@@ -65,27 +72,35 @@
       line-height: 40px;
       /* margin-bottom: 40px; */
       color:lightgray;
-      /* position: absolute; */
+      font-family: 'Relaway', sans-serif;
+      letter-spacing: 3px;
+      font-weight: 700;
+      text-align: center;
+      outline: none;
+      
+      
     }
+    #hero .hero-line3 .typed-cursor {
+      color: #212529;
+      line-height:40px ;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+      word-spacing: 0 ;
+    }
+
     #hero .hero-line3 > div {
       display: inline;
       border: none;
     }
-      #hero .hero-line3 > div.line {
-        border-right: 0.5px solid rgba(0, 0, 0, 0.2) ;
-        border-collapse: separate;
-        border-spacing: 15px 15px;
-        
-      }  
+     
         #hero .hero-line3 > div.line2 {
         padding-top: 5px;
         padding-bottom: 5px;
         padding-left: 8px;
         border-top: 2px solid rgba(0, 0, 0, 0.1);
         border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-        border-collapse: separate;
-        border-spacing: 15px 15px;
-
+    
         }
 /* 
     
@@ -129,12 +144,14 @@
       color: #fff;
       /* border: 1px solid ; */
       border-radius: 50%;
-      font-size: 10px;
-      height: 30px;
-      width: 30px;
-      margin-top: 10px;
-      padding-top: 9px;
+      font-size: inherit;
+      text-align: center;
+      height: 40px;
+      width: 40px;
+      margin-top: 13px;
+      padding-top: 12px;
       background:  rgba(24, 17, 17, 0.1);
+      transition: all 2s;
       /* position: absolute; */
     }
     #hero .hero-socials a:hover {
@@ -167,12 +184,12 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(145, 95, 95, 0.4)
+    background: rgba(0, 0, 0, 0.6)
   }
 #hero * {
    color:#D3D3D3;
    text-decoration: none;
-   word-spacing: 10px;
+   /* word-spacing: 10px; */
    font-size: 15px; 
   }
 
