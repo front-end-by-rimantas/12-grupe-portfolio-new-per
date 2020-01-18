@@ -85,18 +85,18 @@ const linesResume = [
         occupation: 'work',
         line1: 'Jan 2007 - Dec 2007',
         line2: 'SPECIALIZATION COURSE 4',
-        line3: 'Oxford'
+        line3: 'Microsoft'
     },
     {
         occupation: 'work',
         line1: 'Jan 2008 - Dec 2008',
         line2: 'SPECIALIZATION COURSE 5',
-        line3: 'Georgetown'
+        line3: 'Google'
     },
     {
         occupation: 'work',
         line1: 'Jan 2009 - Dec 2009',
         line2: 'SPECIALIZATION COURSE 6',
-        line3: 'Yale'
+        line3: 'Facebook'
     }
 ]

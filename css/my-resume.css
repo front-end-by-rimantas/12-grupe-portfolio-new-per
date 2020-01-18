@@ -124,11 +124,8 @@
     right: 0;
   }
 
-  .resolution {
-    text-align: right;  
-} 
-
-/* @media (max-width: 900px) {
+  
+@media (max-width: 900px) {
        .left-1 .icon { 
             left: 0;
       }
@@ -140,10 +137,21 @@
             left: -6px !important;
       }
         .resolution {
-            text-align: left; }
+            text-align: left; 
+      }
+        .zeronarrow {
+          visibility: hidden;
+              height: 0;
+        }
+          
     }   
+    
 
 @media (min-width: 901px) { .resolution {
             text-align: right;  
     }
-} */
+    .zerowide {
+     visibility: hidden;;
+      height: 0;
+  }
+} 
