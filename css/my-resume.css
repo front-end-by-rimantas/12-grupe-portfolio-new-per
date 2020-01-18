@@ -3,7 +3,7 @@
 .resume h4 {
     font-size: 32px;
     line-height: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     position: relative;
     font-weight: 500;
     margin-left: -8px;
@@ -43,7 +43,7 @@
 
 .resume-content {
     position: relative;
-    padding: 50px 20px;
+    padding: 25px 20px;
   }
 .resume-content .icon {
     background-color: #2e353e;
@@ -63,11 +63,12 @@
   }
 .resume-content ul {
     padding: 0;
+    margin-top: -25px;
   }
 .resume-content ul li {
     position: relative;
     padding: 30px 30px 10px;
-    margin-bottom: -10px;
+    margin-bottom: 15px;
     list-style-type: none;
   }
 .resume-content ul li::after {
@@ -123,9 +124,11 @@
     right: 0;
   }
 
-  
+  .resolution {
+    text-align: right;  
+} 
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
        .left-1 .icon { 
             left: 0;
       }
@@ -143,4 +146,4 @@
 @media (min-width: 901px) { .resolution {
             text-align: right;  
     }
-}
+} */
