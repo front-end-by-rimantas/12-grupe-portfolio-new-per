@@ -6,10 +6,10 @@
 function manipulateLetter( list, wordIndex, letterIndex, actionType) {
     //elementai, kurie animuotai keicia teksta
         const target = document.getElementById('hero_line3');
-        const timeStep = 100;
-        const delayBefore = 1000;
-        const delayAfter = 1000;
-        const deleteTimeStep = 100;
+        const timeStep = 80;
+        const delayBefore = 600;
+        const delayAfter = 600;
+        const deleteTimeStep = 80;
         
 
    if (actionType === 'add') {
@@ -124,7 +124,7 @@ function renderGallery( target, data ) {
                     const work = galleryItems[w];
                     const categories = work.dataset.categories;
 
-function renderGallery (data) {
+
     
                     if ( categories.indexOf(findWhat) >= 0 ) {
                         work.classList.remove('hide');
