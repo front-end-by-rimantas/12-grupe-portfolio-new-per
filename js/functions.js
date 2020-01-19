@@ -252,6 +252,50 @@ function renderAchievements( data ) {
     return;
 }
 
+// My Resume
+
+function renderMyresume( data ) {
+    const maxLines = 6;
+    let createdLines = 0;
+    let HTMLright = '';
+    let HTMLleft = '';
+
+
+   for ( let i=0; i<data.length; i++ ) {
+        if ( createdLines === maxLines ) {
+            break;
+        }
+        const line = data[i];
+        if ( line.occupation === 'edu') {
+
+              HTMLright +=`
+                    <ul class="left col-6 resume-content resolution">
+                        <li >
+                        <span>${line.line1}</span>
+                        <h5>${line.line2}</h5>
+                        <h6>${line.line3}</h6>
+                        </li>
+                    </ul>`;
+        }
+                else   {         
+                HTMLleft += `
+                    <ul class="right col-6 resume-content">
+                        <li >
+                        <span>${line.line1}</span>
+                        <h5>${line.line2}</h5>
+                        <h6>${line.line3}</h6>
+                        </li>
+                    </ul>`;
+      
+        }  
+            createdLines++;
+    }
+    
+        document.querySelector('#myresume').innerHTML = HTMLright;       
+        document.querySelector('#myresume-left').innerHTML = HTMLleft;
+ 
+    return;
+}
 function renderSkills( data ) {
     let HTML = '';
     let HTML1 = '';

@@ -12,6 +12,9 @@ renderGallery('#latest_works_gallery', works);
 
 renderAchievements( achievements );
 
+//Myresume
+
+renderMyresume( linesResume);
 // my-skills
 renderSkills( skills );
 
