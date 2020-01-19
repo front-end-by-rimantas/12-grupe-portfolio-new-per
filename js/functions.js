@@ -295,6 +295,7 @@ function renderMyresume( data ) {
         document.querySelector('#myresume-left').innerHTML = HTMLleft;
  
     return;
+}
 function renderSkills( data ) {
     let HTML = '';
     let HTML1 = '';
