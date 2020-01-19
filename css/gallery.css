@@ -7,7 +7,7 @@
     .gallery .gallery-filter {
         display: inline-block;
         width: 100%;
-        padding: 15px 0;
+        padding: 0 15px;
     }
 
     .gallery .gallery-filter .filter-item{
@@ -18,7 +18,7 @@
         text-transform: capitalize; 
     }
 
-        .gallery .gallery-filter .filter-item:hover,.active {
+        .gallery .gallery-filter .filter-item:hover.active {
             color: var(--secondary-color);
         }
 
@@ -76,9 +76,9 @@
                 }
 
                     .gallery .gallery-list .gallery-item .texts .categories .cat{
-                        display: none;
+                        display: inline-block;
                         padding: 5px 5px;
-                        margin-left: 5px;
+                        margin: 5px;
                         font-size: 12px;
                         line-height: 15px;
                     }

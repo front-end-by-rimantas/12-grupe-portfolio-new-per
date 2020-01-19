@@ -278,7 +278,7 @@ function renderSkills( data ) {
         </div>
     </div>`;
     }
-        console.log(HTML);
+       
         document.querySelector(`#skills_progress_bars_left`).innerHTML = HTML; 
         
         for ( let i=data.length/2; i< data.length; i++ ) {
@@ -305,15 +305,25 @@ function renderSkills( data ) {
 
 function lightbox () {
     const elements = document.querySelectorAll('[data-lightbox]');
+
     
     elements.forEach( elem => {
         elem.addEventListener('click', updateLightbox) 
+        
+        
     })
 }
 
-function updateLightbox() {    
-    const lightboxDOM = document.querySelector('.lightbox');
-    console.log(lightboxDOM);  
+function updateLightbox( event ) {  
+    
+    
+    let lightboxDOM = document.querySelector('.lightbox');
+    let lightboxImg = null;
+    if ( lightboxDOM ) {
+        lightboxImg = lightboxDOM.querySelector ('img');
+        
+    }
+    
 
     // Jei lightbox'o dar nera - sukuriame
     
@@ -328,5 +338,30 @@ function updateLightbox() {
             </div>`;
             document.querySelector('body')
                 .insertAdjacentHTML('beforeend', HTML);
+                lightboxDOM = document.querySelector('.lightbox');
+        lightboxImg = lightboxDOM.querySelector('img');
+        lightboxDOM.querySelector('.background')
+            .addEventListener('click', () => {
+                lightboxDOM.classList.add('hide');
+           
+            })
+        lightboxDOM.querySelector('i')
+            .addEventListener('click', () => {
+                lightboxDOM.classList.add('hide');
+            })
+    } else {
+        lightboxDOM.classList.remove('hide');
+        
     }
+    
+    const item = event.target.closest('[data-lightbox]');
+    const image = item.dataset.lightbox;
+    let imageSrc = '';
+    if ( image === '' ) {
+        imageSrc = item.src;
+    } else {
+        imageSrc = item.querySelector(image).src;
+    }
+    lightboxImg.src = imageSrc;
 }
+    
