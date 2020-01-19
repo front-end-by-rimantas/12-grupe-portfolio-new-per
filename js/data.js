@@ -1,40 +1,43 @@
 "use strict";
+//hero
 
-// GALLERY
+const spec = [ 'ui/ux designer', 'photographer', 'web developer'];
+
+// GALLERY START
 
 const works = [
     {
-        img: '',
-        title: 'Herschels',
-        category: ['HTML', 'CSS']
+        img: '1.jpg',
+        title: 'web design',
+        category: ['Brand', 'Design', 'Video', 'Photo']
     },
     {
-        img: '',
-        title: 'Megan Michelle',
-        category: ['HTML', 'CSS']
+        img: '2.jpg',
+        title: 'web design',
+        category: ['Design', 'Video', 'Photo']
     },
     {
-        img: '',
-        title: 'Coffe',
-        category: ['HTML', 'CSS']
+        img: '3.jpg',
+        title: 'web design',
+        category: ['Design', 'Video', 'Photo',]
     },
     {
-        img: '',
-        title: 'Headphones',
-        category: ['HTML', 'CSS', 'Responsive']
+        img: '4.jpg',
+        title: 'web design',
+        category: ['Design', 'Photo',]
     },
     {
-        img: '',
-        title: 'Cosmetics',
-        category: ['HTML', 'CSS', 'JavaScript']
+        img: '5.jpg',
+        title: 'web design',
+        category: ['Design', 'Brand', 'Photo',]
     },
     {
-        img: '',
-        title: 'Glass',
-        category: ['HTML', 'CSS', 'JavaScript', 'Responsive']
+        img: '6.jpg',
+        title: 'web design',
+        category: ['Design', 'Photo',]
     }
 ]
-
+// GALLERY END
 
 // achivements
 
@@ -100,3 +103,48 @@ const linesResume = [
         line3: 'Facebook'
     }
 ]
+// my-skills
+
+const skills = [
+    {
+        title: 'PHOTOGRAPHY',
+        value: 75
+    },
+    {
+        title: 'BRANDING',
+        value: 95
+    },
+    {
+        title: 'GRAPHIC DESIGN',
+        value: 70
+    },
+    {
+        title: 'DEVELOPMENT',
+        value: 80
+    },
+
+
+    {
+        title: 'HTML / CSS',
+        value: 95
+    },
+    {
+        title: 'JS / JQUERY',
+        value: 80
+    },
+    {
+        title: 'PHP / WORDPRESS',
+        value: 75
+    },
+    {
+        title: 'PHOTO SHOP',
+        value: 94
+    },
+]
+
+
+
+
+
+
+

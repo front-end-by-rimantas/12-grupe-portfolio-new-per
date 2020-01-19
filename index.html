@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
    
@@ -29,10 +31,24 @@
     <!-- header end -->
 
     <!-- hero start -->
-    <div class="container">
+    <div id="hero" class="container over">
         <div class="row">
-            <div class="col-12">
-                HERO
+            <div class="hero-line1 col-8 m-l-2 col-md-10 m-l-md-1 col-sm-12 m-l-sm-0">
+                wellcome 
+            </div>
+            <div class="hero-line2 col-8 m-l-2 col-md-10 m-l-md-1 col-sm-12 m-l-sm-0">
+                I AM JOHN DOE
+            </div>
+             <div class="hero-line3 col-8 m-l-2 col-md-10 m-l-md-1 col-sm-12 m-l-sm-0">
+                <div id="hero_line3"></div> 
+                <span class="typed-cursor"></span>  
+            </div>
+            <div class="hero-socials col-8 m-l-2 col-md-10 m-l-md-1 col-sm-12 m-l-sm-0">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-behance"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#"  class="fa fa-dribbble"></a>
             </div>
         </div>
     </div>
@@ -40,14 +56,16 @@
 
     <!-- about me start -->
     <div id="about" class="container">
-        <div class="row">
+        <div class="row title">
             <div class="col-4 m-l-1 col-md-5 m-r-md-0 m-l-md-0 col-sm-12 m-l-sm-0">
-                <img class="photoborder" src="img/about.jpg" alt="">
+                <img class="photoborder" src="img/about.jpg" 
+                    alt="My Photo"
+                    data-lightbox="">
             </div>
 
             <div class="col-6 col-md-7 m-r-md-0 m-l-md-0 col-sm-12">
                 <div>
-                    <h4 class="title"><span style="font-family:'montserrat'">About </span>Me</h4>
+                    <h4><span>about </span>me</h4>
                 </div>
                 <div>
                     <h6 >I AM A UI/UX DESIGNER AND A HUMAN</h6>
@@ -77,30 +95,24 @@
             </div>
         </div>
     </div>   
-            
-            
-            
-            
-            
+                   
     <!-- about me end -->
 
     <!-- My skills start -->
-    <div class="container bg-primary">
-        <div class="row">
+    <div id="skills" class="container bg-primary">
+        <div id="title" class="row">
             <div class="col-12">
-                <h2>
-                    My skills
-                </h2>
+                <h4 class="title"><span>My </span>Skills</h4>
             </div>
         </div>    
-            <div class="row">
-                <div class="col-6">
-                    Progress-bar
-                </div>
-                <div class="col-6">
-                    Progress-bar
-                </div>
-            </div>        
+        <div class="row ">
+            <div id="skills_progress_bars_left"class="left col-6">
+                Progress-bar
+            </div>
+            <div id="skills_progress_bars_right" class="right col-6">
+                Progress-bar
+            </div>
+        </div>
     </div>
     <!-- my skills end -->
 
@@ -155,18 +167,22 @@
 
     <!-- my resume end -->
 
-    <!-- achievements start -->
-    <div id="achievements" class="counter container bg-primary-light">
+    
+
+
+
+<!-- achievements start -->
+   <div id="achievements" class="counter container bg-primary-light">
         <div class="row ">   
         </div>
     </div>
     <!-- achievements end -->
 
     <!-- my services start -->
-    <div class="container bg-primary">
-        <div class="row">
+    <div id="my_services" class="container bg-primary">
+        <div class="row title">
             <div class="col-12">
-                My services
+                <h4><span>My </span>services</h4>
             </div>
             <!-- <div class="row"> -->
                 <div class="col-4">
@@ -193,31 +209,17 @@
     <!-- my services end -->
 
     <!-- my portfolio start -->
-    <div class="container">
-        <div class="row">
+    <div id="my_portfolio" class="container ">
+        <div class="row title">
             <div class="col-12">
-                My portfolio (gallery)
-            </div>
-        <div class="row">
-            <div class="col-10 bg-secondary">1</div>
-            <div class="col-2 bg-secondary">1</div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                All Brand Design Photo
+                <h4><span>My </span>Portfolio</h4>
             </div>
         </div>
         <div class="row">
-            <div class="col-4 m-l-4 m-r-4">
-                gallery
+            <div id="latest_works_gallery" class="col-12">
+                Gallery
             </div>
-            <div class="col-4 m-l-4 m-r-4">
-                gallery
-            </div>
-            <div class="col-4 m-l-4 m-r-4">
-                gallery
-            </div>
-        </div>
+         </div>
     </div>
     <!-- my portfolio end -->
 
@@ -237,10 +239,10 @@
     <!-- testimonials end -->
 
     <!-- latest blog start -->
-    <div class="container">
-        <div class="row">
+    <div id="latest_blog" class="container">
+        <div class="row title">
             <div class="col-12">
-                Latest blog
+                <h4><span>My </span>blog</h4>
             </div>
         </div>
         <div class="row">
@@ -258,10 +260,10 @@
     <!-- latest blog end -->
 
     <!-- get in touch start -->
-    <div class="container bg-primary">
-        <div class="row">
+    <div id="get_in_touch" class="container bg-primary">
+        <div class="row title">
             <div class="col-7">
-                <h2>Get in touch (message form, contact info)</h2>
+                <h4><span>Get </span>in touch</h4>
                 <div class="row">
                     Your full name here
                 </div>
@@ -282,15 +284,16 @@
         </div>
     </div>
     <!-- get in touch end -->
-    
-    <!-- footer start -->
-    <div class="container ">
+
+
+<!-- footer start -->
+    <footer class="footer">
         <div class="row">
             <div class="col-12">
-                Footer
+                <p>Copy right &copy by a-shawky 2019 | all rights reserved.<p>
             </div>
         </div>
-    </div>
+    </footer>
     <!-- footer end -->
     
     <script src="./js/data.js"></script>
