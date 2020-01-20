@@ -359,6 +359,7 @@ function renderServices( myServicesList ) {
                     <h4>${myServices.title}</h4>
                     <p>${myServices.description}</p>
                 </div>`;
+                if (i === 2) { HTML += `<div class="separator"></div>` }
     }
     
     return document.querySelector('#services_list').innerHTML = HTML;
