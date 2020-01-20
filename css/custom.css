@@ -15,6 +15,7 @@
 }
 
 .title h4 {
+  display:inline-block; 
   font-size: 32px;
   line-height: 50px;
   margin-bottom: 30px;
@@ -254,7 +255,9 @@
 
 
 /*About me */
-#title h4 {
+/* #title h4 {
+  display: inline-block!important;
+  text-align: center;
   font-size: 32px;
   line-height: 50px;
   margin-bottom: 30px;
@@ -285,7 +288,7 @@
   margin-left: 0px;
   bottom: -7px;
   left: 0;
-}
+} */
 
 
 /* Header */
@@ -398,6 +401,59 @@
 
 
 /* My services */
+
+.service {
+  display: inline-block;
+  padding: 30px 30px;
+  text-align: center;
+   
+}
+
+  /* .service {
+    border-right: 1px solid #0f0e0e;
+    border-left: 1px solid #0f0e0e;
+    border-top: 1px solid #0f0e0e;
+  }
+   */
+
+  .service > i {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      background-color: white;
+      border: 3px solid white;
+      border-radius: 50%;
+      font-size: 30px;
+      line-height: 50px;
+      color: var(--secondary-color);
+      transition: all 1s;
+  }
+  .service > i:hover {
+    background-color: var(--secondary-color) ;
+    color: white;
+  }
+
+  .service > p {
+      display: inline-block;
+      width: 100%;
+      padding-top: 15px;
+      margin-top: 10px;
+      text-transform: initial;
+      color: #0f0e0e;
+      font-size: 15px;
+      line-height: 20px;
+  }
+/* #services_list .row {
+  display: inline-block;
+  padding-bottom: 25px;
+  border-right: 1px solid #0f0e0e;
+  border-left: 1px solid #0f0e0e;
+  background-color: lawngreen
+} */
+ 
 
 /* My portfolio (gallery) */
 
