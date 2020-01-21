@@ -346,6 +346,29 @@ function renderSkills( data ) {
        
     return;
 }
+//latest blog 
+
+
+function renderBlog( latestBlog ) {
+    let HTML = '';
+
+    for ( let i=0; i<latestBlogList.length; i++ ) {
+        const latestBlog = latestBlogList[i];
+        HTML += `<div class="blog row col-4 col-md-6 col-xs-12">
+                   <div class="img-blog${latestBlog.img}">
+                        <div class="btn${latestBlog.btn}">
+                   </div>
+                    <h4>${latestBlog.title}</h4>
+                    <p>${latestBlog.description}</p>
+                    <div class="img-user${latest}
+
+                </div>`
+    //             if (i === 2) { HTML += `<div class="separator"></div>` }
+    }
+    
+    return document.querySelector('#latest_blog_list').innerHTML = HTML;
+}
+
 
 function lightbox () {
     const elements = document.querySelectorAll('[data-lightbox]');
