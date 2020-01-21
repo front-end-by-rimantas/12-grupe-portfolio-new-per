@@ -322,7 +322,6 @@ function renderSkills( data ) {
         </div>
     </div>`;
     }
-        console.log(HTML);
         document.querySelector(`#skills_progress_bars_left`).innerHTML = HTML; 
         
         for ( let i=data.length/2; i< data.length; i++ ) {
