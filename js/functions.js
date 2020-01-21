@@ -398,5 +398,9 @@ function updateLightbox() {
 // Testimonials
 
 function renderTestimonials(target, data) {
+    console.log(target);
+    console.log(data);
+    
+    
     return;
 }
