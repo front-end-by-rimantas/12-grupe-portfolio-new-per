@@ -398,6 +398,6 @@ function updateLightbox() {
 
 // Testimonials
 
-function renderTestimonials (target, data) {
+function renderTestimonials(target, data) {
     return;
 }
