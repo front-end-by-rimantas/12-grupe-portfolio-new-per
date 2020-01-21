@@ -349,41 +349,48 @@ function renderSkills( data ) {
 //latest blog 
 
 
-function renderBlog( latestBlog ) {
+// function renderBlog( latestBlog ) {
+//     let HTML = '';
+
+//     for ( let i=0; i<latestBlogList.length; i++ ) {
+//         const latestBlog = latestBlogList[i];
+//         HTML += `<div class="blog row col-4 col-md-6 col-xs-12">
+//                    <div class="img-blog${latestBlog.img}">
+//                         <div class="btn${latestBlog.btn}">
+//                    </div>
+//                     <h4>${latestBlog.title}</h4>
+//                     <p>${latestBlog.description}</p>
+//                     <div class="img-user${latest}
+
+//                 </div>`
+//     //             if (i === 2) { HTML += `<div class="separator"></div>` }
+//     }
+    
+//     return document.querySelector('#services_list').innerHTML = HTML;
+
+function renderBlog( blogList ) {
     let HTML = '';
+    
+    for ( let i=0; i<blogList.length; i++ ) {
+        const blog = blogList[i];
 
-    for ( let i=0; i<latestBlogList.length; i++ ) {
-        const latestBlog = latestBlogList[i];
-        HTML += `<div class="blog row col-4 col-md-6 col-xs-12">
-                   <div class="img-blog${latestBlog.img}">
-                        <div class="btn${latestBlog.btn}">
-                   </div>
-                    <h4>${latestBlog.title}</h4>
-                    <p>${latestBlog.description}</p>
-                    <div class="img-user${latest}
-
-                </div>`
-    //             if (i === 2) { HTML += `<div class="separator"></div>` }
+        HTML += `<div class="blogas">
+        <div>
+            <a href="#">${blog.link}</a>
+            <div class="blog_img"><img src="./img/blog/${blog.photo}"></div>
+            <h4 class="blog-title">${blog.title}</h4>
+            </a>
+            <p class="text">${blog.description}<p>
+        </div>
+                <div class="bottom">
+                    <img src="./img/testimonel/${blog.user}">
+                    <p class="user">${blog.username}</p>
+                    <div class="date">${blog.date}</div>
+                </div>
+        </div>`
     }
     
-    return document.querySelector('#services_list').innerHTML = HTML;
-function renderBlogs (data) {
-    let HTML = '';
-
-    for (let i=0; i<data.length; i++) {
-        HTML += `<div class="blog">
-                    <div class="top">
-                        <div class="toptop">
-                            <div class="blogpic"><img src="./img/blog/${data[i].img}" alt="blog-pic"></div>
-                        </div>
-                            <img src="./img/${data[i].userimg}" alt="user-pic" id="user">
-                    <p class="under-blog">${data[i].date}</p>
-                    </div>
-                        <h4 class="uppercase">${data[i].title}</h4>
-                        <p>${data[i].text}</p>
-                </div>`
-    }
-    return document.querySelector('#blogs').innerHTML = HTML;
+    return document.querySelector('#blogas').innerHTML = HTML;
 }
 
 
@@ -414,4 +421,4 @@ function updateLightbox() {
                 .insertAdjacentHTML('beforeend', HTML);
     }
 }
-}
+// }

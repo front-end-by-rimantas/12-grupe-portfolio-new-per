@@ -22,7 +22,7 @@ renderSkills( skills );
 
 renderServices( myServices );
 //latestBlog
-renderBlog( blogs );
+renderBlog( blog );
 
 //lightbox
 lightbox();

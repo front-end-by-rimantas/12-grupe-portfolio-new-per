@@ -144,35 +144,32 @@ const skills = [
 
 //latestBlog
 
-const blogs = [
-    { 
-        img: '1blog.jpg',
+const blog = [
+    {
+        link:'Ui/UX',
+        photo: '1blog.jpg',
+        title: 'Riomaggiore coast scene',
+        text: 'Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, incid idunt ut labore et.',
+        user: '1.jpg',
+        date: '25 June 2017'
+    },
+    {
+        link:'web design',
+        photo: '2blog.jpg',
         title: 'light trails on highway',
-        description: 'Quisque dui at erat auctor pulvinar nisl felis, gravida et aliquam vitae, aliquet quis nibh.',
-        userimg: '1.jpg',
-        username: 'BY : JACK DANIEL',
-        date: '25 JUNE 2017',
-        
+        text: 'Quisque dui at erat auctor pulvinar nisl felis, gravida et aliquam vitae, aliquet quis nibh.',
+        user: '2.jpg',
+        date: '15 Jan 2018'
     },
-    { 
-        img: '2blog.jpg',
-        title: 'riomaggiore coast scene',
-        description: 'Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, incid idunt ut labore et.',
-        userimg: '2.jpg',
-        username: 'BY : Jason Jahr',
-        date: '28 July 2018',
-        
-    },
-    { 
-        img: '3blog.jpg',
+    {
+        link: 'development',
+        photo: '3blog.jpg',
         title: '10 secrets tips for web design',
-        description: 'Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, incid idunt ut labore et.',
-        userimg: '3.jpg',
-        username: 'BY : Jamy Petersson',
-        date: '29 August 2018',
-        
+        text: 'Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, incid idunt ut labore et.',
+        user: '3.jpg',
+        date: '20 fab 2019'
     }
-]
+];
 
 
 
