@@ -366,7 +366,24 @@ function renderBlog( latestBlog ) {
     //             if (i === 2) { HTML += `<div class="separator"></div>` }
     }
     
-    return document.querySelector('#latest_blog_list').innerHTML = HTML;
+    return document.querySelector('#services_list').innerHTML = HTML;
+function renderBlogs (data) {
+    let HTML = '';
+
+    for (let i=0; i<data.length; i++) {
+        HTML += `<div class="blog">
+                    <div class="top">
+                        <div class="toptop">
+                            <div class="blogpic"><img src="./img/blog/${data[i].img}" alt="blog-pic"></div>
+                        </div>
+                            <img src="./img/${data[i].userimg}" alt="user-pic" id="user">
+                    <p class="under-blog">${data[i].date}</p>
+                    </div>
+                        <h4 class="uppercase">${data[i].title}</h4>
+                        <p>${data[i].text}</p>
+                </div>`
+    }
+    return document.querySelector('#blogs').innerHTML = HTML;
 }
 
 
@@ -396,4 +413,5 @@ function updateLightbox() {
             document.querySelector('body')
                 .insertAdjacentHTML('beforeend', HTML);
     }
+}
 }

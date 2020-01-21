@@ -18,4 +18,11 @@ renderMyresume( linesResume);
 // my-skills
 renderSkills( skills );
 
+// MY SERVICES
+
+renderServices( myServices );
+//latestBlog
+renderBlog( blogs );
+
+//lightbox
 lightbox();
