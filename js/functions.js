@@ -395,3 +395,9 @@ function updateLightbox() {
                 .insertAdjacentHTML('beforeend', HTML);
     }
 }
+
+// Testimonials
+
+function renderTestimonials (target, data) {
+    return;
+}
