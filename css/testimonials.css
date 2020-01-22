@@ -4,12 +4,17 @@
     padding: 40px 80px;
     background-color: #ccc;
     text-align: center;
+    overflow: hidden;
 }
     
     .testimonials .list {
         display: inline-block;
         width: 100%;
-    }
+        transition: all 1s;
+    }  
+        .testimonials .list.no-animation {
+          transition: unset;
+        }
     
     .testimonials .controls {
         display: inline-block;
@@ -41,10 +46,10 @@
             }
 
 
-    .testimonials .testimonial > * {
+    .testimonials .testimonial {
         display: inline-block;
         width: 50%;
-        /* margin: 0 25px; */
+        float: left;
     }
 
     .testimonials .testimonial > * {
