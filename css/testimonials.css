@@ -1,8 +1,8 @@
 .testimonials {
     display: inline-block;
-    width: 100%;
-    padding: 40px 80px;
-    background-color: #ccc;
+    width: 70%;
+    margin: 50px ;
+    background-color: #0007;
     text-align: center;
     overflow: hidden;
 }
@@ -25,15 +25,16 @@
         .testimonials .controls .fa {
             font-size: 20px;
             line-height: 20px;
-            padding: 10px 15px;
+            padding: 10px 10px;
             cursor: pointer;
+            color: var(--primary-light-color);
         }
     
         .testimonials .controls .line {
             display: inline-block;
             width: 120px;
-            height: 4px;
-            margin: 18px 10px;
+            height: 2px;
+            margin: 19px 10px;
             background-color: var(--primary-light-color);
         }
     
@@ -59,35 +60,34 @@
 
     .testimonials .testimonial .quote {
         margin-bottom: 10px;
-        font-size: 20px;
-        line-height: 20px;
+        font-size: 18px;
+        line-height: 18px;
         text-transform: uppercase;
         color: var(--secondary-color);
     }
 
     .testimonials .testimonial .stars {
-        margin: 10px;
 
     }
 
         .testimonials .testimonial .stars i {
             margin: 0 2px;
-            font-size: 24px;
-            line-height: 25px;
+            font-size: 20px;
+            line-height: 20px;
             color: #FFD600;
         }
 
     .testimonials .testimonial .text {
         padding: 20px;
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 14px;
+        line-height: 18px;
         color: var(--primary-light-color);
     }
 
     .testimonials .testimonial .author {
         margin-bottom: 10px;
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 14px;
+        line-height: 18px;
         text-transform: uppercase;
         color: var(--primary-light-color);
     }
