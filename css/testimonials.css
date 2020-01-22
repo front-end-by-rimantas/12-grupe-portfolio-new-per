@@ -3,7 +3,43 @@
     width: 100%;
     padding: 40px 80px;
     background-color: #ccc;
+    text-align: center;
 }
+    
+    .testimonials .list {
+        display: inline-block;
+        width: 100%;
+    }
+    
+    .testimonials .controls {
+        display: inline-block;
+        width: 100%;
+        margin-top: 40px;
+    }
+    
+        .testimonials .controls .fa {
+            font-size: 20px;
+            line-height: 20px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    
+        .testimonials .controls .line {
+            display: inline-block;
+            width: 120px;
+            height: 4px;
+            margin: 18px 10px;
+            background-color: var(--primary-light-color);
+        }
+    
+            .testimonials .controls .line .bar {
+                display: inline-block;
+                width: calc(100% / 3);
+                height: 100%;
+                float: left;
+                background-color: var(--secondary-color);
+            }
+
 
     .testimonials .testimonial > * {
         display: inline-block;
@@ -14,7 +50,6 @@
     .testimonials .testimonial > * {
         display: inline-block;
         width: 100%;
-        text-align: center;
       }
 
     .testimonials .testimonial .quote {
@@ -57,7 +92,7 @@
         line-height: 20px;
         text-transform: uppercase;
         color: var(--primary-light-color);
-
+        margin-bottom: ;
     }
 
     

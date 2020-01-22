@@ -398,16 +398,38 @@ function updateLightbox() {
 // Testimonials
 
 function renderTestimonials(target, data) {
-    let HTML = '';
+    const DOM = document.querySelector(target);
+    let testimonialsHTML = '';
 
     // for ( let i=0; i<data.length; i++) {
-    //     HTML += generateTestimonial(data[i]);
+    //     testimonialsHTML += generateTestimonial(data[i]);
     // }
 
-    const random = Math.floor(Math.random() * data.length);
-    HTML = generateTestimonial(data[random]);
+    const middleIndex = Math.floor(data.length / 2 );
+    testimonialsHTML = generateTestimonial(data[middleIndex]);
 
-    document.querySelector(target).innerHTML = HTML;
+    const HTML = `<div class="testimonials" data-index="${middleIndex}">
+                    <div class="list">${testimonialsHTML}</div>
+                    <div class="controls">
+                        <i class="fa fa-angle-left"></i>
+                        <div class="line">
+                            <div class="bar"
+                                style="margin-left: ${middleIndex * 100 / data.length}%;"></div>
+                        </div>
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>`;
+
+    DOM.innerHTML = HTML;
+
+    const arrows = DOM.querySelectorAll('.controls > .fa')
+
+    arrows.forEach( arrow => arrow.addEventListener('click', updateTestimonials));
+
+    // for (let i=0; i<arrows.length; i++ ) {
+    //     const arrow = arrows[i];
+    //     arrow.addEventListener('click', updateTestimonials)
+    // }  // Менее красивыйб но более эффективный способ записи
     
     return;
 }
@@ -426,4 +448,27 @@ function generateTestimonial(data) {
                 <div class="author">${data.author}</div>
                 <div class="profession">${data.profession}</div>
             </div>`;
+}
+
+function updateTestimonials( event ) {
+    const element = event.target;
+    const parent = element.closest('.testimonials');
+    let direction = 1;
+    if ( element.classList.contains('fa-angle-left') ) {
+        direction = -1;
+    }
+
+        const currentIndex = parseInt(parent.dataset.index);
+        let nextIndex = currentIndex + direction;
+        // Jeigu nextIndex = -1, tai varom i gala
+        if (nextIndex === -1) {
+            nextIndex = testimonials.length - 1;
+        } 
+        // Jeigu nextIndex = testimonials.length, tai varom i pradzia
+        if (nextIndex === testimonials.length) {
+            nextIndex = 0;
+        }
+
+        parent.setAttribute('data-index', nextIndex);
+        parent.querySelector('.list').innerHTML = generateTestimonial(testimonials[nextIndex]);
 }
