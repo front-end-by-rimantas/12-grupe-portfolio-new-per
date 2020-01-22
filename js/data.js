@@ -181,6 +181,7 @@ const works = [
 // GALLERY END
 
 // Testimonials Start
+let testimonialsAnimationInProgress = false;
 const testimonials = [
     {
         stars: 5,
