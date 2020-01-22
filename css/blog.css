@@ -1,0 +1,11 @@
+.blog-list {
+    display: inline-block;
+    width: 100%;
+}
+.blog-list > .blog {
+    display: inline-block;
+    width: calc ((100% - 90px) / 3);
+    margin: 0 15px;
+    background-color: chartreuse;
+}
+

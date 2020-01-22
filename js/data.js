@@ -146,28 +146,73 @@ const skills = [
 
 const blog = [
     {
-        link:'Ui/UX',
-        photo: '1blog.jpg',
+        category:'Ui/UX',
+        link: '#',
+        photo: {
+            src:'1blog.jpg',
+            alt: 'Photo 1'
+        },
         title: 'Riomaggiore coast scene',
-        text: 'Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, incid idunt ut labore et.',
-        user: '1.jpg',
-        date: '25 June 2017'
+        description: 'Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, incid idunt ut labore et.',
+        user: {
+            src:'1.jpg',
+            alt: 'Photo 2'
+        },
+        creator: {
+            name: 'Jack',
+            surname: 'Daniel'
+        },
+        date: {
+            day: 25,
+            month: 'June',
+            year: 2017
+        }
     },
     {
-        link:'web design',
-        photo: '2blog.jpg',
+        category:'web design',
+        link: '#',
+        photo: {
+            src:'2blog.jpg',
+            alt: 'Photo 3'
+        },
         title: 'light trails on highway',
-        text: 'Quisque dui at erat auctor pulvinar nisl felis, gravida et aliquam vitae, aliquet quis nibh.',
-        user: '2.jpg',
-        date: '15 Jan 2018'
+        description: 'Quisque dui at erat auctor pulvinar nisl felis, gravida et aliquam vitae, aliquet quis nibh.',
+        user: {
+            src: '2.jpg',
+            alt: 'Photo 4'
+        },
+        creator: {
+            name: 'John',
+            surname: 'Peterrson'
+        },
+        date: {
+            day: 29,
+            month: 'July',
+            year: 2018
+        }
     },
     {
-        link: 'development',
-        photo: '3blog.jpg',
+        category: 'development',
+        link: '#',
+        photo: {
+            src:'3blog.jpg',
+            alt: 'Photo 5'
+        },
         title: '10 secrets tips for web design',
-        text: 'Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, incid idunt ut labore et.',
-        user: '3.jpg',
-        date: '20 fab 2019'
+        description: 'Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, incid idunt ut labore et.',
+        user: {
+            src:'3.jpg',
+            alt: 'Photo 6'
+        },
+        creator: {
+            name: 'Jammy',
+            surname: 'Count'
+        },
+        date: {
+            day: 25,
+            month: 'August',
+            year: 2018
+        }
     }
 ];
 
