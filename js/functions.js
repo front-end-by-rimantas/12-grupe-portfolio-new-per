@@ -368,30 +368,30 @@ function renderSkills( data ) {
     
 //     return document.querySelector('#services_list').innerHTML = HTML;
 
-function renderBlog( blogList ) {
-    let HTML = '';
+// function renderBlog( blogList ) {
+//     let HTML = '';
     
-    for ( let i=0; i<blogList.length; i++ ) {
-        const blog = blogList[i];
+//     for ( let i=0; i<blogList.length; i++ ) {
+//         const blog = blogList[i];
 
-        HTML += `<div class="blogas">
-        <div>
-            <a href="#">${blog.link}</a>
-            <div class="blog_img"><img src="./img/blog/${blog.photo}"></div>
-            <h4 class="blog-title">${blog.title}</h4>
-            </a>
-            <p class="text">${blog.description}<p>
-        </div>
-                <div class="bottom">
-                    <img src="./img/testimonel/${blog.user}">
-                    <p class="user">${blog.username}</p>
-                    <div class="date">${blog.date}</div>
-                </div>
-        </div>`
-    }
+//         HTML += `<div class="blogas">
+//         <div>
+//             <a href="#">${blog.link}</a>
+//             <div class="blog_img"><img src="./img/blog/${blog.photo}"></div>
+//             <h4 class="blog-title">${blog.title}</h4>
+//             </a>
+//             <p class="text">${blog.description}<p>
+//         </div>
+//                 <div class="bottom">
+//                     <img src="./img/testimonel/${blog.user}">
+//                     <p class="user">${blog.username}</p>
+//                     <div class="date">${blog.date}</div>
+//                 </div>
+//         </div>`
+//     }
     
-    return document.querySelector('#blogas').innerHTML = HTML;
-}
+//     return document.querySelector('#blogas').innerHTML = HTML;
+// }
 
 
 //MY SERVICES
