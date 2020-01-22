@@ -3,67 +3,46 @@
 
 const spec = [ 'ui/ux designer', 'photographer', 'web developer'];
 
-// GALLERY START
+// my-skills
 
-const works = [
+const skills = [
     {
-        img: '1.jpg',
-        title: 'web design',
-        category: ['Brand', 'Design', 'Video', 'Photo']
+        title: 'PHOTOGRAPHY',
+        value: 75
     },
     {
-        img: '2.jpg',
-        title: 'web design',
-        category: ['Design', 'Video', 'Photo']
+        title: 'BRANDING',
+        value: 95
     },
     {
-        img: '3.jpg',
-        title: 'web design',
-        category: ['Design', 'Video', 'Photo',]
+        title: 'GRAPHIC DESIGN',
+        value: 70
     },
     {
-        img: '4.jpg',
-        title: 'web design',
-        category: ['Design', 'Photo',]
+        title: 'DEVELOPMENT',
+        value: 80
+    },
+
+
+    {
+        title: 'HTML / CSS',
+        value: 95
     },
     {
-        img: '5.jpg',
-        title: 'web design',
-        category: ['Design', 'Brand', 'Photo',]
+        title: 'JS / JQUERY',
+        value: 80
     },
     {
-        img: '6.jpg',
-        title: 'web design',
-        category: ['Design', 'Photo',]
-    }
+        title: 'PHP / WORDPRESS',
+        value: 75
+    },
+    {
+        title: 'PHOTO SHOP',
+        value: 94
+    },
 ]
-// GALLERY END
 
-// achivements
-
-
-const achievements = [
-    {
-        icon: 'heart',
-        number: 738,
-        title: 'Happy clients'
-    },
-    {
-        icon: 'check-square-o',
-        number: 102,
-        title: 'SUCCESSFUL PROJECTS'
-    },
-    {
-        icon: 'trophy',
-        number: '06',
-        title: 'Awards Received'
-    },
-    {
-        icon: 'coffee',
-        number: 511,
-        title: 'Cups Of Tea'
-    }
-]
+//MY RESUME
 
 const linesResume = [
     {
@@ -103,44 +82,110 @@ const linesResume = [
         line3: 'Facebook'
     }
 ]
-// my-skills
 
-const skills = [
-    {
-        title: 'PHOTOGRAPHY',
-        value: 75
-    },
-    {
-        title: 'BRANDING',
-        value: 95
-    },
-    {
-        title: 'GRAPHIC DESIGN',
-        value: 70
-    },
-    {
-        title: 'DEVELOPMENT',
-        value: 80
-    },
+//ACHIEVEMENTS
 
 
+const achievements = [
     {
-        title: 'HTML / CSS',
-        value: 95
+        icon: 'heart',
+        number: 738,
+        title: 'Happy clients'
     },
     {
-        title: 'JS / JQUERY',
-        value: 80
+        icon: 'check-square-o',
+        number: 102,
+        title: 'SUCCESSFUL PROJECTS'
     },
     {
-        title: 'PHP / WORDPRESS',
-        value: 75
+        icon: 'trophy',
+        number: '06',
+        title: 'Awards Received'
     },
     {
-        title: 'PHOTO SHOP',
-        value: 94
-    },
+        icon: 'coffee',
+        number: 511,
+        title: 'Cups Of Tea'
+    }
 ]
+
+// MY SERVICES
+
+const myServices = [
+    {
+        icon: 'flower-alt',
+        title: 'BRANDING',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.'
+    },
+    {
+        icon: 'devices',
+        title: 'WEB DESIGN',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.'
+    },
+    {
+        icon: 'shopping-basket',
+        title: 'MARKETING',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.'
+    },
+    {
+        icon: 'code-setting',
+        title: 'CLEAN CODE',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.'
+    },
+    {
+        icon: 'collection-item',
+        title: 'FRIENDELY ALL SCREAN',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.'
+    },
+    {
+        icon: 'compass',
+        title: 'UNLIMITED SUPPORT',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.'
+    }
+];
+
+// GALLERY START
+
+const works = [
+    {
+        img: '1.jpg',
+        title: 'web design',
+        category: ['Brand', 'Design', 'Video', 'Photo']
+    },
+    {
+        img: '2.jpg',
+        title: 'web design',
+        category: ['Design', 'Video', 'Photo']
+    },
+    {
+        img: '3.jpg',
+        title: 'web design',
+        category: ['Design', 'Video', 'Photo',]
+    },
+    {
+        img: '4.jpg',
+        title: 'web design',
+        category: ['Design', 'Photo',]
+    },
+    {
+        img: '5.jpg',
+        title: 'web design',
+        category: ['Design', 'Brand', 'Photo',]
+    },
+    {
+        img: '6.jpg',
+        title: 'web design',
+        category: ['Design', 'Photo',]
+    }
+]
+// GALLERY END
+
+
+
+
+
+
+
 
 //latestBlog
 

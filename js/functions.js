@@ -394,6 +394,27 @@ function renderBlog( blogList ) {
 }
 
 
+//MY SERVICES
+
+function renderServices( myServicesList ) {
+    let HTML = '';
+
+    for ( let i=0; i<myServicesList.length; i++ ) {
+        const myServices = myServicesList[i];
+        HTML += `<div class="service row col-4 col-md-6 col-xs-12">
+                    <i class="zmdi zmdi-${myServices.icon}"></i>
+                    <h4>${myServices.title}</h4>
+                    <p>${myServices.description}</p>
+                </div>`;
+                if (i === 2) { HTML += `<div class="separator"></div>` }
+    }
+    
+    return document.querySelector('#services_list').innerHTML = HTML;
+}
+
+//LIGHTBOX
+
+
 function lightbox () {
     const elements = document.querySelectorAll('[data-lightbox]');
     
