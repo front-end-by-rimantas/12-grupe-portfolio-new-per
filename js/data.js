@@ -180,6 +180,32 @@ const works = [
 ]
 // GALLERY END
 
+// Testimonials Start
+const testimonials = [
+    {
+        stars: 5,
+        text: 'Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Allamco laboris nisi ut aliquip ex ea commodo consequat. Aser velit esse cillum dolore eu fugiat nulla pariatur.',
+        author: 'glenmorangie single malt',
+        profession: 'graphic designer'
+    },
+
+    {
+        stars: 4,
+        text: 'Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Allamco laboris nisi ut aliquip ex ea commodo consequat. Aser velit esse cillum dolore eu fugiat nulla pariatur.',
+        author: 'chivas regal',
+        profession: 'graphic designer'
+    },
+
+    {
+        stars: 2.5,
+        text: 'Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Allamco laboris nisi ut aliquip ex ea commodo consequat. Aser velit esse cillum dolore eu fugiat nulla pariatur.',
+        author: 'nikka coffey',
+        profession: 'graphic designer'
+    }
+]
+
+// Testimonials End
+
 
 
 

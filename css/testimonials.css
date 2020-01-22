@@ -1,1 +1,103 @@
-/* No CSS */
+.testimonials {
+    display: inline-block;
+    width: 100%;
+    padding: 40px 80px;
+    background-color: #ccc;
+    text-align: center;
+    overflow: hidden;
+}
+    
+    .testimonials .list {
+        display: inline-block;
+        width: 100%;
+        transition: all 1s;
+    }  
+        .testimonials .list.no-animation {
+          transition: unset;
+        }
+    
+    .testimonials .controls {
+        display: inline-block;
+        width: 100%;
+        margin-top: 40px;
+    }
+    
+        .testimonials .controls .fa {
+            font-size: 20px;
+            line-height: 20px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    
+        .testimonials .controls .line {
+            display: inline-block;
+            width: 120px;
+            height: 4px;
+            margin: 18px 10px;
+            background-color: var(--primary-light-color);
+        }
+    
+            .testimonials .controls .line .bar {
+                display: inline-block;
+                width: calc(100% / 3);
+                height: 100%;
+                float: left;
+                background-color: var(--secondary-color);
+            }
+
+
+    .testimonials .testimonial {
+        display: inline-block;
+        width: 50%;
+        float: left;
+    }
+
+    .testimonials .testimonial > * {
+        display: inline-block;
+        width: 100%;
+      }
+
+    .testimonials .testimonial .quote {
+        margin-bottom: 10px;
+        font-size: 20px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: var(--secondary-color);
+    }
+
+    .testimonials .testimonial .stars {
+        margin: 10px;
+
+    }
+
+        .testimonials .testimonial .stars i {
+            margin: 0 2px;
+            font-size: 24px;
+            line-height: 25px;
+            color: #FFD600;
+        }
+
+    .testimonials .testimonial .text {
+        padding: 20px;
+        font-size: 16px;
+        line-height: 20px;
+        color: var(--primary-light-color);
+    }
+
+    .testimonials .testimonial .author {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: var(--primary-light-color);
+    }
+
+    .testimonials .testimonial .profession {
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: var(--primary-light-color);
+        margin-bottom: ;
+    }
+
+    

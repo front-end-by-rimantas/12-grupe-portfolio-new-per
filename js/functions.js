@@ -322,7 +322,6 @@ function renderSkills( data ) {
         </div>
     </div>`;
     }
-        console.log(HTML);
         document.querySelector(`#skills_progress_bars_left`).innerHTML = HTML; 
         
         for ( let i=data.length/2; i< data.length; i++ ) {
@@ -394,4 +393,80 @@ function updateLightbox() {
             document.querySelector('body')
                 .insertAdjacentHTML('beforeend', HTML);
     }
+}
+
+// Testimonials
+
+function renderTestimonials(target, data) {
+    const DOM = document.querySelector(target);
+    let testimonialsHTML = '';
+
+    // Atnaujiname duomenis: klonai pirmas gale, paskutinis priekyje
+    // data.push(data[0]);
+    // data.unshift(data[data.length-2])
+    data = [ data[data.length-1], ...data, data[0] ];
+    const middleIndex = Math.floor(data.length / 2 );
+
+    for ( let i=0; i<data.length; i++) {
+        testimonialsHTML += generateTestimonial(data[i]);
+    }
+
+    const HTML = `<div class="testimonials" data-index="${middleIndex}">
+                    <div class="list"
+                        style="width: ${data.length}00%;
+                        margin-left: -${middleIndex}00%;">${testimonialsHTML}</div>
+                    <div class="controls">
+                        <i class="fa fa-angle-left"></i>
+                        <div class="line">
+                            <div class="bar"
+                                style="margin-left: ${(middleIndex - 1) * 100 / (data.length - 2)}%;
+                                    width: ${100 / (data.length - 2)}%;"></div>
+                        </div>
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>`;
+
+    DOM.innerHTML = HTML;
+
+    const arrows = DOM.querySelectorAll('.controls > .fa')
+
+    arrows.forEach( arrow => arrow.addEventListener('click', updateTestimonials));
+
+    // for (let i=0; i<arrows.length; i++ ) {
+    //     const arrow = arrows[i];
+    //     arrow.addEventListener('click', updateTestimonials)
+    // }  // Менее красивыйб но более эффективный способ записи
+    
+    return;
+}
+
+function generateTestimonial(data) {
+    const fullStars = Math.round(data.stars * 2) / 2;
+    const fullHTML = '<i class="fa fa-star"></i>'.repeat(Math.floor(fullStars));
+    const halfHTML = '<i class="fa fa-star-half-o"></i>'.repeat(fullStars%1 === 0 ? 0 : 1);
+    const emptyHTML = '<i class="fa fa-star-o"></i>'.repeat(5 - Math.ceil(fullStars));
+
+    return `<div class="testimonial" style="width: 20%">
+                <div class="quote">awwwesome work</div>
+                <div class="stars">${fullHTML + halfHTML + emptyHTML}</div>
+                <div class="text">${data.text}</div>
+                <div class="author">${data.author}</div>
+                <div class="profession">${data.profession}</div>
+            </div>`;
+}
+
+function updateTestimonials( event ) {
+    const elem = event.target;
+    const parent = elem.closest('.testimonials');
+    const list = parent.querySelector('.list');
+    const currentIndex = parseInt(parent.dataset.index);
+
+    let direction = 1;
+    if (elem.classList.contains('fa-angle-left')) {
+        direction = -1; 
+    }
+    let nextIndex = currentIndex + direction;
+
+    parent.setAttribute('data-index', nextIndex);
+    list.style.marginLeft = nextIndex * -100 + '%';
 }
