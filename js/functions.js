@@ -362,7 +362,7 @@ function renderBlog( list ) {
         const art = list[i];
 
 
-        HTML += `<div class="blog row col-12">
+        HTML += `<div class="blog row">
         <img src="./img/blog/${art.photo.src}" alt="${art.photo.alt}">
         <a class="category" href="#/art-by-category/${art.category}">${art.category}</a>
         <a class="titlee" href="${art.link}">${art.title}</a>
@@ -371,7 +371,7 @@ function renderBlog( list ) {
         <div class="user">
         <img src="./img/testimonel/${art.user.src}" alt="${art.photo.alt}"> 
         <span class="creator"  
-        class="date"> BY:${art.creator.name} ${art.creator.surname} | ${art.date.day} ${art.date.month} ${art.date.year}</span> 
+        class="date"> BY: ${art.creator.name} ${art.creator.surname} | ${art.date.day} ${art.date.month} ${art.date.year}</span> 
         </div>
      </div>`
     }

@@ -184,7 +184,7 @@ const works = [
 
 const blog = [
     {
-        category:'Ui/UX',
+        category:'UI/UX',
         link: '#',
         photo: {
             src:'1blog.jpg',
@@ -202,12 +202,12 @@ const blog = [
         },
         date: {
             day: 25,
-            month: 'June',
+            month: 'Jun',
             year: 2017
         }
     },
     {
-        category:'web design',
+        category:'Web design',
         link: '#',
         photo: {
             src:'2blog.jpg',
@@ -221,16 +221,16 @@ const blog = [
         },
         creator: {
             name: 'John',
-            surname: 'Peterrson'
+            surname: 'Daniel'
         },
         date: {
             day: 29,
-            month: 'July',
+            month: 'Jul',
             year: 2018
         }
     },
     {
-        category: 'development',
+        category: 'Development',
         link: '#',
         photo: {
             src:'3blog.jpg',
@@ -243,12 +243,12 @@ const blog = [
             alt: 'Photo'
         },
         creator: {
-            name: 'Jammy',
-            surname: 'Count'
+            name: 'Jamy',
+            surname: 'Daniel'
         },
         date: {
             day: 25,
-            month: 'August',
+            month: 'Aug',
             year: 2018
         }
     }
