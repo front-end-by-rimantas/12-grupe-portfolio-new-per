@@ -371,7 +371,7 @@ function renderBlog( list ) {
         <div class="user">
         <img src="./img/testimonel/${art.user.src}" alt="${art.photo.alt}"> 
         <span class="creator"  
-        class="date"> BY: ${art.creator.name} ${art.creator.surname} | ${art.date.day} ${art.date.month} ${art.date.year}</span> 
+        class="date">BY: ${art.creator.name} ${art.creator.surname} | ${art.date.day} ${art.date.month} ${art.date.year}</span> 
         </div>
      </div>`
     }
