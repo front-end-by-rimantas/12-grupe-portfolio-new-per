@@ -349,50 +349,35 @@ function renderSkills( data ) {
 //latest blog 
 
 
-// function renderBlog( latestBlog ) {
-//     let HTML = '';
+function renderBlog( list ) {
+     let HTML = '';
+     if ( !Array.isArray(list) ) {
+        return console.error('ERROR: blogo formato duomenys.');
+    }
+    if ( list.length === 0 ) {
+        return console.error('ERROR:negali buti tuscias sarasas.');
+    }
 
-//     for ( let i=0; i<latestBlogList.length; i++ ) {
-//         const latestBlog = latestBlogList[i];
-//         HTML += `<div class="blog row col-4 col-md-6 col-xs-12">
-//                    <div class="img-blog${latestBlog.img}">
-//                         <div class="btn${latestBlog.btn}">
-//                    </div>
-//                     <h4>${latestBlog.title}</h4>
-//                     <p>${latestBlog.description}</p>
-//                     <div class="img-user${latest}
+    for ( let i=0; i<list.length; i++ ) {
+        const art = list[i];
 
-//                 </div>`
-//     //             if (i === 2) { HTML += `<div class="separator"></div>` }
-//     }
+
+        HTML += `<div class="blog row col-12">
+        <img src="./img/blog/${art.photo.src}" alt="${art.photo.alt}">
+        <a class="category" href="#/art-by-category/${art.category}">${art.category}</a>
+        <a class="titlee" href="${art.link}">${art.title}</a>
+        <p>${art.description}</p>
+        <div class="separator"></div>
+        <div class="user">
+        <img src="./img/testimonel/${art.user.src}" alt="${art.photo.alt}"> 
+        <span class="creator"  
+        class="date"> BY:${art.creator.name} ${art.creator.surname} | ${art.date.day} ${art.date.month} ${art.date.year}</span> 
+        </div>
+     </div>`
+    }
+return document.querySelector('#blog > .blog-list').innerHTML = HTML;
+ }
     
-//     return document.querySelector('#services_list').innerHTML = HTML;
-
-// function renderBlog( blogList ) {
-//     let HTML = '';
-    
-//     for ( let i=0; i<blogList.length; i++ ) {
-//         const blog = blogList[i];
-
-//         HTML += `<div class="blogas">
-//         <div>
-//             <a href="#">${blog.link}</a>
-//             <div class="blog_img"><img src="./img/blog/${blog.photo}"></div>
-//             <h4 class="blog-title">${blog.title}</h4>
-//             </a>
-//             <p class="text">${blog.description}<p>
-//         </div>
-//                 <div class="bottom">
-//                     <img src="./img/testimonel/${blog.user}">
-//                     <p class="user">${blog.username}</p>
-//                     <div class="date">${blog.date}</div>
-//                 </div>
-//         </div>`
-//     }
-    
-//     return document.querySelector('#blogas').innerHTML = HTML;
-// }
-
 
 //MY SERVICES
 

@@ -19,8 +19,9 @@ renderSkills( skills );
 // MY SERVICES
 
 renderServices( myServices );
+
 //latestBlog
-// renderBlog( blog );
+renderBlog( blog );
 
 //lightbox
 lightbox();

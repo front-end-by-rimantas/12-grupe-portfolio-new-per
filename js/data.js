@@ -180,13 +180,6 @@ const works = [
 ]
 // GALLERY END
 
-
-
-
-
-
-
-
 //latestBlog
 
 const blog = [
@@ -195,13 +188,13 @@ const blog = [
         link: '#',
         photo: {
             src:'1blog.jpg',
-            alt: 'Photo 1'
+            alt: 'Photo'
         },
         title: 'Riomaggiore coast scene',
         description: 'Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, incid idunt ut labore et.',
         user: {
             src:'1.jpg',
-            alt: 'Photo 2'
+            alt: 'Photo'
         },
         creator: {
             name: 'Jack',
@@ -218,13 +211,13 @@ const blog = [
         link: '#',
         photo: {
             src:'2blog.jpg',
-            alt: 'Photo 3'
+            alt: 'Photo'
         },
         title: 'light trails on highway',
         description: 'Quisque dui at erat auctor pulvinar nisl felis, gravida et aliquam vitae, aliquet quis nibh.',
         user: {
             src: '2.jpg',
-            alt: 'Photo 4'
+            alt: 'Photo'
         },
         creator: {
             name: 'John',
@@ -241,13 +234,13 @@ const blog = [
         link: '#',
         photo: {
             src:'3blog.jpg',
-            alt: 'Photo 5'
+            alt: 'Photo'
         },
         title: '10 secrets tips for web design',
         description: 'Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, incid idunt ut labore et.',
         user: {
             src:'3.jpg',
-            alt: 'Photo 6'
+            alt: 'Photo'
         },
         creator: {
             name: 'Jammy',
