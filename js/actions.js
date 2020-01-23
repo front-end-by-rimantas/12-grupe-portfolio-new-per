@@ -22,3 +22,6 @@ renderServices( myServices );
 
 //lightbox
 lightbox();
+
+// Testimonials
+renderTestimonials('#testimonials_block', testimonials);
