@@ -1,26 +1,24 @@
 .blog-list {
     display: inline-block;
     width: calc(100% + 30px);
-    margin: 0 -15px;
-    overflow: hidden;
+    margin: 0 15px;
+    
 }
     .blog-list > .blog {
         display: inline-block;
         width: calc((100% - 90px) / 3);
         margin: 10px 15px;
         font-family: 'Montsserat',sans-serif;
-        /* float: right; */
         position: relative;
         background-color: var(--primary-color);
     }
         .blog-list > .blog > img {
             display: inline-block;
             width: 100%;
-            height: 350px;
-            background-color: blue;
+            height: 250px;
             object-fit: cover;
-            object-position: bottom center;
-            overflow: hidden;
+            object-position: bottom center; 
+            outline: none;
 
         }
         .blog-list > .blog > .category {
@@ -28,7 +26,6 @@
             position: absolute;
             top: 15px;
             right: 15px;
-            /* width: 50px; */
             height: 30px;
             font-weight: 400;
             padding: 3.5px 7px;
@@ -48,9 +45,8 @@
             font-size: 20px;
             color:#000;
             line-height: 30px;
-            margin-top: 30px;
-            margin-bottom: 25px;
-            /* margin: 15px 0; */
+            margin-top: 20px;
+            margin-bottom: 10px;
             text-decoration: none;
 
         }
@@ -65,9 +61,12 @@
             font-size: 16px;
             text-transform: initial;
             font-family: 'Montserrat',sans-serif;
+            font-size: 400;
             text-align: center;
-            line-height: 20px;
+            line-height: 30px;
+            margin-top: 20px;
             margin-bottom: 20px;
+            outline: none;
             color:gray;
             
         }
@@ -81,31 +80,31 @@
         }
 
         .blog-list > .blog > .user {
-            display: inline-block;
+            display:inline-block;
             width: 100%;
+            height: 55px;
             font-size: 15px;
             font-family: 'Montsserat', sans-serif;
             text-transform: uppercase;
-            word-spacing: 2px;
+            word-spacing: 3px;
             margin-top: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             box-sizing: border-box;
             border-radius: 30px;
             background-color: #fff;
-            overflow: hidden;
+            /* background-position: center; */
             outline: none;
-            color:#212529
-            
+            color:#212529;
+        
         }
             .blog-list > .blog > .user img {
                 display: inline-block;
                 max-width: 100%;
-                height: 65px;
+                height: 55px;
                 box-sizing: border-box;
                 border: 3px solid lightgray;
                 border-radius: 50px;
-                overflow: hidden;
-            
+                
             }   .blog-list > .blog > .user span {
                 display: inline-block;
                 text-align: center;
@@ -113,49 +112,37 @@
                 font-family: 'Montsserat',sans-serif;
                 text-transform: uppercase;
                 margin-top: 20px ;
-                padding-top: 8px
-
+                margin-left: 5px;
+                /* padding: 3px; */
             }      
-                    /* .blog-list > .blog > .user span > .creator {
-                        display: inline-block;
-                        letter-spacing: 2px;
-                    } */
 
-      @media (min-width: 1102px) { 
-        .blog-list > .blog {
+     @media (min-width: 1101px) { 
+    .blog-list > .blog {
         display: inline-block;
         width: calc((100% - 90px) / 3);
-        /* position: relative; */
+        position: relative;
 
     }
     .blog-list > .blog > .user {
-        display: inline-block; 
+        display:inline-flex; 
         width: 100%;
-        height: 70px;
-        /* margin:0; */
-        overflow: hidden;
         outline: none;
-     
-    }
-}
 
-    @media (max-width: 1103px) { 
-        .blog-list > .blog {
+    }
+} 
+
+    @media (max-width: 1102px) { 
+    .blog-list > .blog {
         display: inline-block;
-        width: 100%;
-        margin-left: 10px;
-        margin-right: 10px;
-        
+        width: 100%;   
     }
          
     .blog-list > .blog > .user {
-        display: inline-block;
+        display:inline-flex;
         width: 100%;
-        /* margin-left: 10px;
-        margin-bottom: 10px; */
-        /* padding: 0;  */
+        outline: none;
     }
-}
+}  
 
 
         
