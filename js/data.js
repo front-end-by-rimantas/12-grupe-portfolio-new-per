@@ -208,13 +208,77 @@ const testimonials = [
 // Testimonials End
 
 
-
-
-
-
-
-
-
+const blog = [
+    {
+        category:'UI/UX',
+        link: '#',
+        photo: {
+            src:'1blog.jpg',
+            alt: 'Photo'
+        },
+        title: 'Riomaggiore coast scene',
+        description: 'Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, incid idunt ut labore et.',
+        user: {
+            src:'1.jpg',
+            alt: 'Photo'
+        },
+        creator: {
+            name: 'Jack',
+            surname: 'Daniel'
+        },
+        date: {
+            day: 25,
+            month: 'Jun',
+            year: 2017
+        }
+    },
+    {
+        category:'Web design',
+        link: '#',
+        photo: {
+            src:'2blog.jpg',
+            alt: 'Photo'
+        },
+        title: 'light trails on highway',
+        description: 'Quisque dui at erat auctor pulvinar nisl felis, gravida et aliquam vitae, aliquet quis nibh.',
+        user: {
+            src: '2.jpg',
+            alt: 'Photo'
+        },
+        creator: {
+            name: 'John',
+            surname: 'Daniel'
+        },
+        date: {
+            day: 29,
+            month: 'Jul',
+            year: 2018
+        }
+    },
+    {
+        category: 'Development',
+        link: '#',
+        photo: {
+            src:'3blog.jpg',
+            alt: 'Photo'
+        },
+        title: '10 secrets tips for web design',
+        description: 'Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, incid idunt ut labore et.',
+        user: {
+            src:'3.jpg',
+            alt: 'Photo'
+        },
+        creator: {
+            name: 'Jamy',
+            surname: 'Daniel'
+        },
+        date: {
+            day: 25,
+            month: 'Aug',
+            year: 2018
+        }
+    }
+];
 
 
 

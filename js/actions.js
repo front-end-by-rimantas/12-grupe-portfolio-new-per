@@ -20,6 +20,9 @@ renderSkills( skills );
 
 renderServices( myServices );
 
+//latestBlog
+renderBlog( blog );
+
 //lightbox
 lightbox();
 

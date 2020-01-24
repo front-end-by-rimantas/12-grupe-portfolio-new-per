@@ -345,6 +345,38 @@ function renderSkills( data ) {
        
     return;
 }
+//latest blog 
+
+
+function renderBlog( list ) {
+     let HTML = '';
+     if ( !Array.isArray(list) ) {
+        return console.error('ERROR: blogo formato duomenys.');
+    }
+    if ( list.length === 0 ) {
+        return console.error('ERROR:negali buti tuscias sarasas.');
+    }
+
+    for ( let i=0; i<list.length; i++ ) {
+        const art = list[i];
+
+
+        HTML += `<div class="blog row">
+        <img src="./img/blog/${art.photo.src}" alt="${art.photo.alt}">
+        <a class="category" href="#/art-by-category/${art.category}">${art.category}</a>
+        <a class="titlee" href="${art.link}">${art.title}</a>
+        <p>${art.description}</p>
+        <div class="separator"></div>
+        <div class="user">
+        <img src="./img/testimonel/${art.user.src}" alt="${art.photo.alt}"> 
+        <span class="creator"  
+        class="date">BY: ${art.creator.name} ${art.creator.surname} | ${art.date.day} ${art.date.month} ${art.date.year}</span> 
+        </div>
+     </div>`
+    }
+return document.querySelector('#blog > .blog-list').innerHTML = HTML;
+ }
+    
 
 //MY SERVICES
 
