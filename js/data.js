@@ -180,14 +180,105 @@ const works = [
 ]
 // GALLERY END
 
+// Testimonials Start
+let testimonialsAnimationInProgress = false;
+const testimonials = [
+    {
+        stars: 5,
+        text: 'Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Allamco laboris nisi ut aliquip ex ea commodo consequat. Aser velit esse cillum dolore eu fugiat nulla pariatur.',
+        author: 'glenmorangie single malt',
+        profession: 'graphic designer'
+    },
+
+    {
+        stars: 4,
+        text: 'Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Allamco laboris nisi ut aliquip ex ea commodo consequat. Aser velit esse cillum dolore eu fugiat nulla pariatur.',
+        author: 'chivas regal',
+        profession: 'graphic designer'
+    },
+
+    {
+        stars: 2.5,
+        text: 'Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Allamco laboris nisi ut aliquip ex ea commodo consequat. Aser velit esse cillum dolore eu fugiat nulla pariatur.',
+        author: 'nikka coffey',
+        profession: 'graphic designer'
+    }
+]
+
+// Testimonials End
 
 
-
-
-
-
-
-
+const blog = [
+    {
+        category:'UI/UX',
+        link: '#',
+        photo: {
+            src:'1blog.jpg',
+            alt: 'Photo'
+        },
+        title: 'Riomaggiore coast scene',
+        description: 'Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, incid idunt ut labore et.',
+        user: {
+            src:'1.jpg',
+            alt: 'Photo'
+        },
+        creator: {
+            name: 'Jack',
+            surname: 'Daniel'
+        },
+        date: {
+            day: 25,
+            month: 'Jun',
+            year: 2017
+        }
+    },
+    {
+        category:'Web design',
+        link: '#',
+        photo: {
+            src:'2blog.jpg',
+            alt: 'Photo'
+        },
+        title: 'light trails on highway',
+        description: 'Quisque dui at erat auctor pulvinar nisl felis, gravida et aliquam vitae, aliquet quis nibh.',
+        user: {
+            src: '2.jpg',
+            alt: 'Photo'
+        },
+        creator: {
+            name: 'John',
+            surname: 'Daniel'
+        },
+        date: {
+            day: 29,
+            month: 'Jul',
+            year: 2018
+        }
+    },
+    {
+        category: 'Development',
+        link: '#',
+        photo: {
+            src:'3blog.jpg',
+            alt: 'Photo'
+        },
+        title: '10 secrets tips for web design',
+        description: 'Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, incid idunt ut labore et.',
+        user: {
+            src:'3.jpg',
+            alt: 'Photo'
+        },
+        creator: {
+            name: 'Jamy',
+            surname: 'Daniel'
+        },
+        date: {
+            day: 25,
+            month: 'Aug',
+            year: 2018
+        }
+    }
+];
 
 
 

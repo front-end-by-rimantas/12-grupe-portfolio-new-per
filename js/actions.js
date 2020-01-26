@@ -20,5 +20,11 @@ renderSkills( skills );
 
 renderServices( myServices );
 
+//latestBlog
+renderBlog( blog );
+
 //lightbox
 lightbox();
+
+// Testimonials
+renderTestimonials('#testimonials_block', testimonials);
