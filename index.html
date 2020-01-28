@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./css/main.css">
+    
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
    
@@ -62,7 +64,7 @@
                     alt="My Photo">
             </div>
 
-            <div class="col-6 col-md-7 m-r-md-0 m-l-md-0 col-sm-12">
+            <div class=" col-6 col-md-7 m-r-md-0 m-l-md-0 col-sm-12">
                 <div>
                     <h4><span>about </span>me</h4>
                 </div>
@@ -99,11 +101,9 @@
 
     <!-- My skills start -->
     <div id="skills" class="container bg-primary">
-        <div id="title" class="row">
-            <div class="col-12">
-                <h4 class="title"><span>My </span>Skills</h4>
-            </div>
-        </div>    
+        <div class="row title center">
+                <h4><span>My </span>Skills</h4>
+        </div>
         <div class="row ">
             <div id="skills_progress_bars_left"class="left col-6">
                 Progress-bar
@@ -116,31 +116,54 @@
     <!-- my skills end -->
 
     <!-- my resume start -->
-    <div id="my_resume" class="container">
-        <div class="row title">
-            <div class="col-12">
-                <h4><span>My </span>resume</h4>
-            </div>        
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <div class="scills-section left">
-                    SPECIALISATION COURSE
-                    SPECIALISATION COURSE
-                    SPECIALISATION COURSE
-                </div>
-            </div>        
-        </div>
-        <div class="row"> 
-            <div class="col-6">
-                <div class="scills-section right">
-                    SPECIALISATION COURSE
-                    SPECIALISATION COURSE
-                    SPECIALISATION COURSE
+    <div class="container resume">
+        <div class="row title ">
+
+          <!-- Title -->
+          
+            <div class="row col-12" >
+                <div style="width: 250px; margin: auto;
+                text-align: center;">
+                <h4 > <span>My </span>Resume</h4>
                 </div>
             </div>
-        </div> 
+
+        
+            <div class="col-6 col-sm-12">
+                <div class="resume-content left-1 " style="text-align: right">
+                    <div class="icon"><i class="fa fa-book" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-12 zeronarrow">
+                <div class="resume-content right-1" style="text-align: left">
+                    <div class="icon"><i class="fa fa-briefcase" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="myresume" class="col-6 col-sm-12 resume-content ">               
+            </div>
+
+            <div class="col-6 col-sm-12 zerowide zeronarrow">
+                <div class="resume-content left-1 " style="text-align: right">
+                    <div class="icon"><i class="fa fa-book" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-12 zerowide">
+                <div class="resume-content right-1" style="text-align: left">
+                    <div class="icon"><i class="fa fa-briefcase" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div id="myresume-left" class="col-6 col-sm-12 resume-content">               
+            </div>
+        </div>
     </div>
+
+
     <!-- my resume end -->
 
     
@@ -155,37 +178,16 @@
     <!-- achievements end -->
 
     <!-- my services start -->
-    <div id="my_services" class="container bg-primary">
-        <div class="row title">
-            <div class="col-12">
-                <h4><span>My</span>services</h4>
-            </div>
-            <!-- <div class="row"> -->
-                <div class="col-4">
-                    Branding
-                </div>
-                <div class="col-4">
-                    Web design
-                </div>
-                <div class="col-4">
-                    Marketing
-                </div>
-                <div class="col-4">
-                    Clean code
-                </div>
-                <div class="col-4">
-                    Frindely all screan
-                </div>
-                <div class="col-4">
-                    Unlimited support
-                </div>
-            </div>
+    <div id="myServices" class="center container bg-primary" >
+        <div class="row title col-12">
+                <h4><span>My</span> Services</h4>
         </div>
-    </div>
+        <div  id="services_list" class="row"></div>
+    </div>  
     <!-- my services end -->
 
     <!-- my portfolio start -->
-    <div id="latest_works" class="container" data-nav="Works">
+    <div id="my_portfolio" class="container center">
         <div class="row title">
             <div class="col-12">
                 <h4><span>My</span>Portfolio</h4>
@@ -200,40 +202,35 @@
     <!-- my portfolio end -->
 
     <!-- testimonials start -->
-    <div class="container">
+    <div id="testimonials" class="counter container text-center">
         <div class="row">
-            <div class="col-12">
-                Testimonials
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                Testimonials
+            <div id="testimonials_block" class="col-12">
+                Testimonials + Testimonials Controls
             </div>
         </div>
     </div>
     <!-- testimonials end -->
 
     <!-- latest blog start -->
-    <div id="latest_blog" class="container">
-        <div class="row title">
-            <div class="col-12">
-                <h4><span>My </span>blog</h4>
+
+    <div class="container col-12" >
+        <div class="row col-12 title center" >
+            <h4><span>Latest</span> Blog</h4>
+        </div> 
+        <div class="row col-12 " id="blog">
+            <div class="row col-12 center blog-list">
+                <!-- <div class="blog">
+                    <img src="./img/blog/1blog.jpg" alt="Photo">
+                    <a class="category" href="#/new-per.netlify.com/pavadinimas">UI/UX</a>
+                    <a class="titlee" href="#">Article title</a>
+                    <p>Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, incid idunt ut labore et.</p>
+                    <div class="user">
+                    <img src="#" alt="Photo"> <span class="creator" class="date"> BY </span> 
+                    </div>
+                 </div> -->
             </div>
-        </div>
-        <div class="row">
-            <div class="col-4 m-l-4 m-r-4">
-                Latest blog
-            </div>
-            <div class="col-4 m-l-4 m-r-4">
-                Latest blog
-            </div>
-            <div class="col-4 m-l-4 m-r-4">
-                Latest blog
-            </div>
-        </div>
+        </div>      
     </div>
-    <!-- latest blog end -->
 
     <!-- get in touch start -->
     <div id="get_in_touch" class="container bg-primary">

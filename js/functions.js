@@ -252,6 +252,50 @@ function renderAchievements( data ) {
     return;
 }
 
+// My Resume
+
+function renderMyresume( data ) {
+    const maxLines = 6;
+    let createdLines = 0;
+    let HTMLright = '';
+    let HTMLleft = '';
+
+
+   for ( let i=0; i<data.length; i++ ) {
+        if ( createdLines === maxLines ) {
+            break;
+        }
+        const line = data[i];
+        if ( line.occupation === 'edu') {
+
+              HTMLright +=`
+                    <ul class="left col-6 resume-content resolution">
+                        <li >
+                        <span>${line.line1}</span>
+                        <h5>${line.line2}</h5>
+                        <h6>${line.line3}</h6>
+                        </li>
+                    </ul>`;
+        }
+                else   {         
+                HTMLleft += `
+                    <ul class="right col-6 resume-content">
+                        <li >
+                        <span>${line.line1}</span>
+                        <h5>${line.line2}</h5>
+                        <h6>${line.line3}</h6>
+                        </li>
+                    </ul>`;
+      
+        }  
+            createdLines++;
+    }
+    
+        document.querySelector('#myresume').innerHTML = HTMLright;       
+        document.querySelector('#myresume-left').innerHTML = HTMLleft;
+ 
+    return;
+}
 function renderSkills( data ) {
     let HTML = '';
     let HTML1 = '';
@@ -301,6 +345,59 @@ function renderSkills( data ) {
        
     return;
 }
+//latest blog 
+
+
+function renderBlog( list ) {
+     let HTML = '';
+     if ( !Array.isArray(list) ) {
+        return console.error('ERROR: blogo formato duomenys.');
+    }
+    if ( list.length === 0 ) {
+        return console.error('ERROR:negali buti tuscias sarasas.');
+    }
+
+    for ( let i=0; i<list.length; i++ ) {
+        const art = list[i];
+
+
+        HTML += `<div class="blog row">
+        <img src="./img/blog/${art.photo.src}" alt="${art.photo.alt}">
+        <a class="category" href="#/art-by-category/${art.category}">${art.category}</a>
+        <a class="titlee" href="${art.link}">${art.title}</a>
+        <p>${art.description}</p>
+        <div class="separator"></div>
+        <div class="user">
+        <img src="./img/testimonel/${art.user.src}" alt="${art.photo.alt}"> 
+        <span class="creator"  
+        class="date">BY: ${art.creator.name} ${art.creator.surname} | ${art.date.day} ${art.date.month} ${art.date.year}</span> 
+        </div>
+     </div>`
+    }
+return document.querySelector('#blog > .blog-list').innerHTML = HTML;
+ }
+    
+
+//MY SERVICES
+
+function renderServices( myServicesList ) {
+    let HTML = '';
+
+    for ( let i=0; i<myServicesList.length; i++ ) {
+        const myServices = myServicesList[i];
+        HTML += `<div class="service row col-4 col-md-6 col-xs-12">
+                    <i class="zmdi zmdi-${myServices.icon}"></i>
+                    <h4>${myServices.title}</h4>
+                    <p>${myServices.description}</p>
+                </div>`;
+                if (i === 2) { HTML += `<div class="separator"></div>` }
+    }
+    
+    return document.querySelector('#services_list').innerHTML = HTML;
+}
+
+//LIGHTBOX
+
 
 function lightbox () {
     const elements = document.querySelectorAll('[data-lightbox]');
@@ -361,6 +458,123 @@ function updateLightbox( event ) {
     } else {
         imageSrc = item.querySelector(image).src;
     }
-    lightboxImg.src = imageSrc;
 }
+
+// Testimonials
+
+function renderTestimonials(target, data) {
+    const DOM = document.querySelector(target);
+    let testimonialsHTML = '';
+
+    // Atnaujiname duomenis: klonai pirmas gale, paskutinis priekyje
+    // data.push(data[0]);
+    // data.unshift(data[data.length-2])
+    data = [ data[data.length-1], ...data, data[0] ];
+    const middleIndex = Math.floor(data.length / 2 );
+
+    for ( let i=0; i<data.length; i++) {
+        testimonialsHTML += generateTestimonial(data[i]);
+    }
+
+    const HTML = `<div class="testimonials" data-index="${middleIndex}">
+                    <div class="list"
+                        style="width: ${data.length}00%;
+                        margin-left: -${middleIndex}00%;">${testimonialsHTML}</div>
+                    <div class="controls">
+                        <i class="fa fa-angle-left"></i>
+                        <div class="line">
+                            <div class="bar"
+                                style="margin-left: ${(middleIndex - 1) * 100 / (data.length - 2)}%;
+                                    width: ${100 / (data.length - 2)}%;"></div>
+                        </div>
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>`;
+
+    DOM.innerHTML = HTML;
+
+    const arrows = DOM.querySelectorAll('.controls > .fa')
+
+    arrows.forEach( arrow => arrow.addEventListener('click', updateTestimonials));
+
+    // for (let i=0; i<arrows.length; i++ ) {
+    //     const arrow = arrows[i];
+    //     arrow.addEventListener('click', updateTestimonials)
+    // }  // Менее красивыйб но более эффективный способ записи
     
+    return;
+}
+
+function generateTestimonial(data) {
+    const fullStars = Math.round(data.stars * 2) / 2;
+    const fullHTML = '<i class="fa fa-star"></i>'.repeat(Math.floor(fullStars));
+    const halfHTML = '<i class="fa fa-star-half-o"></i>'.repeat(fullStars%1 === 0 ? 0 : 1);
+    const emptyHTML = '<i class="fa fa-star-o"></i>'.repeat(5 - Math.ceil(fullStars));
+
+    return `<div class="testimonial" style="width: 20%">
+                <div class="quote">awwwesome work</div>
+                <div class="stars">${fullHTML + halfHTML + emptyHTML}</div>
+                <div class="text">${data.text}</div>
+                <div class="author">${data.author}</div>
+                <div class="profession">${data.profession}</div>
+            </div>`;
+}
+
+function updateTestimonials( event ) {
+    if ( testimonialsAnimationInProgress === true ) {
+        return;
+    }
+    testimonialsAnimationInProgress = true;
+    const elem = event.target;
+    const parent = elem.closest('.testimonials');
+    const list = parent.querySelector('.list');
+    const bar = parent.querySelector('.bar');
+    const currentIndex = parseInt(parent.dataset.index);
+
+    let direction = 1;
+    if ( elem.classList.contains('fa-angle-left') ) {
+        direction = -1;
+    }
+    let nextIndex = currentIndex + direction;
+    
+    parent.setAttribute('data-index', nextIndex);
+    list.style.marginLeft = nextIndex * -100 + '%';
+
+    // jei i ekrana ivaziuoja "klonai", tai juos "teleportuojame"
+    if ( nextIndex === 0 ) {
+        setTimeout(() => {
+            list.classList.add('no-animation');
+            nextIndex = testimonials.length;
+            parent.setAttribute('data-index', nextIndex);
+            list.style.marginLeft = testimonials.length * -100 + '%';
+        }, 1000);
+        setTimeout(() => {
+            list.classList.remove('no-animation');
+        }, 1100)
+    }
+    if ( nextIndex === testimonials.length + 1 ) {
+        setTimeout(() => {
+            list.classList.add('no-animation');
+            nextIndex = 1;
+            parent.setAttribute('data-index', nextIndex);
+            list.style.marginLeft = -100 + '%';
+        }, 1000);
+        setTimeout(() => {
+            list.classList.remove('no-animation');
+        }, 1100)
+    }
+
+    let barIndex = nextIndex;
+    if ( nextIndex === 0 ) {
+        barIndex = testimonials.length;
+    }
+    if ( nextIndex === testimonials.length + 1 ) {
+        barIndex = 1;
+    }
+    bar.style.marginLeft = (barIndex - 1) * (100 / testimonials.length) + '%';
+    
+
+    setTimeout(() => {
+        testimonialsAnimationInProgress = false;
+    }, 1100);
+}
